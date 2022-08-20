@@ -14,7 +14,7 @@ export default function ContactForm() {
         placeholder="Detalle fecha y cantidad de pasajeros (mayores y niños)"
       ></TextArea>
       <ButtonPrimary>ENVIAR</ButtonPrimary>
-      <ReactWhatsapp number="03518048259" message="Hola!" element="div">
+      <ReactWhatsapp number="+54 9 351 564 2035" message="Hola!" element="div">
         <Whatsapp></Whatsapp>
       </ReactWhatsapp>
     </Root>
