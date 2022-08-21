@@ -1,0 +1,16 @@
+import { ButtonPrimary } from "ui/buttons";
+import { Title } from "ui/typography";
+import { Box, BoxButton, Root } from "./styled";
+
+export default function HomeMain() {
+  return (
+    <Root>
+      <Box>
+        <Title align="left">ESE LUGAR QUE BUSCAS ...</Title>
+      </Box>
+      <BoxButton>
+        <ButtonPrimary>CONOCENOS</ButtonPrimary>
+      </BoxButton>
+    </Root>
+  );
+}

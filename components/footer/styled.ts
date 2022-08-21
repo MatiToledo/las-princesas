@@ -1,16 +1,20 @@
-import { Whatsapp } from "ui/icons";
 import styled from "styled-components";
 
 export const Root = styled.div`
-  background-color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  background-color: var(--gray-weak);
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+`;
+
+export const Social = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 15px;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 9999;
+  justify-content: space-around;
+  width: 250px;
 `;
 
 export const WhatsappLogo = styled.div`
@@ -21,8 +25,9 @@ export const WhatsappLogo = styled.div`
   width: 58px;
   height: 58px;
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 15px;
+  right: 15px;
   background-color: var(--white);
   border-radius: 50%;
+  z-index: 9999;
 `;
