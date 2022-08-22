@@ -1,8 +1,12 @@
+import { useAlojamientos } from "hooks";
 import { ButtonPrimary } from "ui/buttons";
 import { Title } from "ui/typography";
 import { Box, BoxButton, Root } from "./styled";
 
 export default function HomeMain() {
+  const alojamientos = useAlojamientos();
+  console.log("alojamientos", alojamientos);
+
   return (
     <Root>
       <Box>

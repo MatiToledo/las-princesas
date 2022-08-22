@@ -26,13 +26,13 @@ export const Large: any = styled.p`
   color: ${(props) => props.color || "var(--gray-weak)"};
 `;
 
-export const Body = styled.p`
+export const Body: any = styled.p`
   margin: 0;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: ${(props) => props.color || "var(--gray-strong)"};
-  text-align: center;
+  text-align: ${(props: any) => props.align || "center"};
   text-transform: initial;
   line-height: initial;
 `;

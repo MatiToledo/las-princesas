@@ -3,6 +3,8 @@ import Footer from "components/footer";
 import HomeMain from "components/home-main";
 import HomeRedirects from "components/home-redirects";
 import HomeServices from "components/home-services";
+import { contentFetcher } from "lib";
+import { contentfulClient } from "lib/contentful";
 import Header from "../components/header";
 
 export default function Home() {

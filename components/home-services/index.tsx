@@ -1,4 +1,4 @@
-import { CardHome, CardService } from "ui/cards";
+import { CardHome } from "ui/cards";
 import { Header, Root, ServiceContainer } from "./styled";
 import alojamiento from "public/alojamiento.png";
 import relax from "public/relax.jpeg";
@@ -10,6 +10,7 @@ import espacios from "public/espacios.png";
 import juegos from "public/juegos.png";
 import quincho from "public/quincho.png";
 import { Body, Title } from "ui/typography";
+import { IconService } from "ui/icons";
 
 export default function HomeServices() {
   return (
@@ -41,30 +42,30 @@ export default function HomeServices() {
         body="Ofrecemos oportunidad para el disfrute y contacto con la naturaleza en espacios de entretenimiento y juego al aire libre y en nuestro Club House."
       ></CardHome>
       <ServiceContainer>
-        <CardService
+        <IconService
           src={desayuno}
           body="Desayuno seco/ Panificacion en la cabaña"
-        ></CardService>
-        <CardService
+        ></IconService>
+        <IconService
           src={limpieza}
           body="Servicio de limpieza + Ropa de  blanco"
-        ></CardService>
-        <CardService
+        ></IconService>
+        <IconService
           src={wifi}
           body="WIFI. Repetidoras en el complejo."
-        ></CardService>
-        <CardService
+        ></IconService>
+        <IconService
           src={espacios}
           body="Espacios comunes para estar"
-        ></CardService>
-        <CardService
+        ></IconService>
+        <IconService
           src={juegos}
           body="Lugares de juego para grandes y chicos"
-        ></CardService>
-        <CardService
+        ></IconService>
+        <IconService
           src={quincho}
           body="Quincho con asador, disco y horno de barro"
-        ></CardService>
+        ></IconService>
       </ServiceContainer>
     </Root>
   );

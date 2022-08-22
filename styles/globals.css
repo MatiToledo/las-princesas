@@ -11,6 +11,7 @@ body {
 }
 
 :root {
+  --cream-weak: #f7f5ef;
   --cream: #f2eee4;
   --gray-weak: #8c8c8c;
   --gray-strong: #736e5f;

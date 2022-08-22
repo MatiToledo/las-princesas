@@ -52,30 +52,6 @@ export function CardHome({ title, src, body }: CardHomeProps) {
   );
 }
 
-//SERVICES CARD
-
-const RootServices = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  width: 150px;
-`;
-
-type CardServiceProps = {
-  src: StaticImageData;
-  body: string;
-};
-export function CardService({ src, body }: CardServiceProps) {
-  return (
-    <RootServices>
-      <Image src={src} width={100} height={100} layout="fixed"></Image>
-      <Body>{body}</Body>
-    </RootServices>
-  );
-}
-
 //REDIRECT CARD
 
 const RootRedirect = styled.div`
@@ -122,5 +98,93 @@ export function CardRedirect({ title, src }: CardRedirectProps) {
         <ButtonPrimary>VER</ButtonPrimary>
       </RedirectBox>
     </RootRedirect>
+  );
+}
+
+//ALOJAMIENTOS CARD
+
+const RootAlojamiento = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+
+  ::before {
+    content: "";
+    width: 75%;
+    height: 1px;
+    background-color: var(--gray-weak);
+    position: relative;
+  }
+`;
+
+const AlojamientoImgContainer = styled.div`
+  width: 100%;
+  min-height: 233px;
+  height: 260px;
+  position: relative;
+`;
+
+type CardAlojamientoProps = {
+  title: string;
+  description: string;
+  src: StaticImageData;
+};
+export function CardAlojamiento({
+  title,
+  description,
+  src,
+}: CardAlojamientoProps) {
+  return (
+    <RootAlojamiento>
+      <AlojamientoImgContainer>
+        <Image src={src} layout="fill" objectFit="cover"></Image>
+      </AlojamientoImgContainer>
+      <Subtitle color="var(--gray-weak)">{title}</Subtitle>
+      <Body align="left">{description}</Body>
+      <ButtonPrimary>VER MAS</ButtonPrimary>
+    </RootAlojamiento>
+  );
+}
+
+//CARD SERVICE
+
+const RootService = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+
+  ::before {
+    content: "";
+    width: 75%;
+    height: 1px;
+    background-color: var(--gray-weak);
+    position: relative;
+  }
+`;
+
+const ServiceImgContainer = styled.div`
+  width: 100%;
+  min-height: 233px;
+  height: 260px;
+  position: relative;
+`;
+
+type CardServiceProps = {
+  title: string;
+  description: string;
+  src: StaticImageData;
+};
+
+export function CardService({ title, description, src }: CardServiceProps) {
+  return (
+    <RootService>
+      <ServiceImgContainer>
+        <Image src={src} layout="fill" objectFit="cover"></Image>
+      </ServiceImgContainer>
+      <Subtitle color="var(--gray-weak)">{title}</Subtitle>
+      <Body align="left">{description}</Body>
+    </RootService>
   );
 }
