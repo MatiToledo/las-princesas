@@ -5,7 +5,6 @@ import { getImageContentful } from "controllers/contentful";
 export function useAlojamientos() {
   const { data, error } = useSWRImmutable("alojamientos", contentFetcher);
   const assets = data?.includes.Asset;
-  console.log(data);
 
   const alojamientos = data?.items.map((item: any) => {
     const img = getImageContentful(item, assets);
@@ -35,4 +34,24 @@ export function useServicios() {
   });
 
   return servicios;
+}
+export function useComplejoFotos() {
+  const { data, error } = useSWRImmutable("complejo", contentFetcher);
+  const assets = data?.includes.Asset;
+
+  const fotos = data?.items[0].fields.images.map((image: any) => {
+    const assetId = image.sys.id;
+    const asset = assets.find((assetItem: any) => {
+      const id = assetItem.sys.id;
+
+      if (id === assetId) return true;
+    });
+    const img = "https:" + asset.fields.file.url;
+    return {
+      img,
+      id: image.sys.id,
+    };
+  });
+
+  return fotos;
 }

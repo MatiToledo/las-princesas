@@ -5,7 +5,6 @@ import { CardsContainer, Root } from "./styled";
 
 export default function ServiciosComp() {
   const servicios = useServicios();
-  console.log(servicios);
 
   return (
     <Root>

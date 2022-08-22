@@ -5,7 +5,6 @@ import { Box, BoxButton, Root } from "./styled";
 
 export default function HomeMain() {
   const alojamientos = useAlojamientos();
-  console.log("alojamientos", alojamientos);
 
   return (
     <Root>

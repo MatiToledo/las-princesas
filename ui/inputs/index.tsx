@@ -17,17 +17,17 @@ export const Input = styled.input.attrs((props: any) => ({
   width: 100%;
   height: 35px;
   padding-left: 10px;
-  border: 1px solid var(--white);
+  border: 1px solid var(--gray-weak);
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
 
   ::placeholder {
-    color: var(--white);
+    color: var(--gray-weak);
   }
 
   :focus {
     outline: none;
-    border: 1px solid var(--white);
+    border: 1px solid var(--gray-weak);
   }
 `;
 
@@ -42,7 +42,7 @@ export function TextField({ label, placeholder }: any) {
 
 const Textarea = styled.textarea`
   border-radius: 5px;
-  border: 1px solid var(--white);
+  border: 1px solid var(--gray-weak);
   width: 100%;
   min-height: 100px;
   resize: none;
@@ -52,12 +52,12 @@ const Textarea = styled.textarea`
   font-family: "Montserrat", sans-serif;
 
   ::placeholder {
-    color: var(--white);
+    color: var(--gray-weak);
   }
 
   :focus {
     outline: none;
-    border: 1px solid var(--white);
+    border: 1px solid var(--gray-weak);
   }
 `;
 

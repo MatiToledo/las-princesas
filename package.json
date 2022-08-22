@@ -11,6 +11,7 @@
   "dependencies": {
     "@types/styled-components": "^5.1.26",
     "contentful": "^9.1.34",
+    "mapbox-gl": "^2.9.2",
     "next": "12.2.5",
     "next-svgr": "^0.0.2",
     "react": "18.2.0",
