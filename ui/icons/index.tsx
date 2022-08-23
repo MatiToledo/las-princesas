@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import MenuIcon from "./menu.svg";
 import CloseIcon from "./close.svg";
+import PrevIcon from "./prev.svg";
+import NextIcon from "./next.svg";
 import WhatsappIcon from "./whatsapp.svg";
 import FacebookSVG from "./facebook.svg";
 import InstagramSVG from "./instagram.svg";
@@ -20,6 +22,26 @@ export const Close = styled(CloseIcon)`
   stroke: var(--gray-strong);
   width: 20px;
   height: 20px;
+`;
+export const Prev = styled(PrevIcon)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  stroke: var(--gray-strong);
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+`;
+export const Next = styled(NextIcon)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  stroke: var(--gray-strong);
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
 `;
 
 export const Whatsapp = styled(WhatsappIcon)`

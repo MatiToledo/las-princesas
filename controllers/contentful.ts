@@ -19,5 +19,12 @@ export function getMultipleImagesContentful(image: any, assets: any) {
   });
 
   const img = "https:" + asset.fields.file.url;
-  return img;
+  if (asset.fields.description) {
+    return {
+      img,
+      description: asset.fields.description,
+    };
+  } else {
+    return img;
+  }
 }

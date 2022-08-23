@@ -36,3 +36,10 @@ export const Body: any = styled.p`
   text-transform: initial;
   line-height: initial;
 `;
+
+export const Caracteristic = styled(Body)`
+  background-color: var(--cream);
+  padding: 15px 5px;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+`;
