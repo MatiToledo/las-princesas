@@ -5,6 +5,7 @@ import { Banner, CardsContainer, Root } from "./styled";
 
 export default function AlojamientosComp() {
   const alojamientos = useAlojamientos();
+
   return (
     <Root>
       <Title>
@@ -19,6 +20,7 @@ export default function AlojamientosComp() {
               title={a.title}
               src={a.img}
               description={a.description}
+              path={a.path}
             ></CardAlojamiento>
           );
         })}

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Body, Large, Subtitle } from "ui/typography";
 import Image, { StaticImageData } from "next/image";
 import { ButtonPrimary } from "ui/buttons";
+import { useRouter } from "next/router";
 
 //HOME CARD
 const RootHome = styled.div`
@@ -129,12 +130,20 @@ type CardAlojamientoProps = {
   title: string;
   description: string;
   src: StaticImageData;
+  path: string;
 };
+
 export function CardAlojamiento({
   title,
   description,
   src,
+  path,
 }: CardAlojamientoProps) {
+  const router = useRouter();
+
+  function handleClick() {
+    router.push({ pathname: "/alojamientos/" + path });
+  }
   return (
     <RootAlojamiento>
       <AlojamientoImgContainer>
@@ -142,7 +151,7 @@ export function CardAlojamiento({
       </AlojamientoImgContainer>
       <Subtitle color="var(--gray-weak)">{title}</Subtitle>
       <Body align="left">{description}</Body>
-      <ButtonPrimary>VER MAS</ButtonPrimary>
+      <ButtonPrimary onClick={handleClick}>VER MAS</ButtonPrimary>
     </RootAlojamiento>
   );
 }

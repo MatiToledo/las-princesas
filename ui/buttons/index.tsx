@@ -13,9 +13,9 @@ export const BaseButoon = styled.button`
   }
 `;
 
-export function ButtonPrimary({ children }: any) {
+export function ButtonPrimary({ children, onClick }: any) {
   return (
-    <BaseButoon>
+    <BaseButoon onClick={onClick}>
       <Body color="var(--white)">{children}</Body>
     </BaseButoon>
   );

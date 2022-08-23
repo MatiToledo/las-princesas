@@ -1,6 +1,10 @@
 import { contentFetcher } from "lib";
 import useSWRImmutable from "swr";
-import { getImageContentful } from "controllers/contentful";
+import {
+  getImageContentful,
+  getMultipleImagesContentful,
+} from "controllers/contentful";
+import { useRouter } from "next/router";
 
 export function useAlojamientos() {
   const { data, error } = useSWRImmutable("alojamientos", contentFetcher);
@@ -13,6 +17,7 @@ export function useAlojamientos() {
       title: item.fields.title,
       description: item.fields.description,
       img,
+      path: item.fields.path,
     };
   });
 
@@ -54,4 +59,27 @@ export function useComplejoFotos() {
   });
 
   return fotos;
+}
+
+export function UseCabana() {
+  const router = useRouter();
+  const cabanaPath = router.asPath.slice(14);
+
+  const { data, error } = useSWRImmutable(cabanaPath, contentFetcher);
+  const assets = data?.includes.Asset;
+
+  const images = data?.items[0].fields.images.map((image: any) => {
+    return getMultipleImagesContentful(image, assets);
+  });
+
+  const equipment = data?.items[0].fields.equipment.map((image: any) => {
+    return getMultipleImagesContentful(image, assets);
+  });
+
+  return {
+    title: data?.items[0].fields.title,
+    description: data?.items[0].fields.description,
+    images,
+    equipment,
+  };
 }
