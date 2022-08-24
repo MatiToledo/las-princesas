@@ -1,12 +1,9 @@
 import CarouselComp from "components/carousel";
-import { UseCabana } from "hooks";
 import { IconService } from "ui/icons";
 import { Caracteristic, Title } from "ui/typography";
 import { CaracteristicContainer, Root, ServiceContainer } from "./styled";
 
-export default function CabanaComp() {
-  const cabana = UseCabana();
-
+export default function CabanaComp({ cabana }: any) {
   return (
     <Root>
       <Title>{cabana.title}</Title>
