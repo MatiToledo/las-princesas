@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Body, Large, Subtitle } from "ui/typography";
 import Image, { StaticImageData } from "next/image";
 import { ButtonPrimary } from "ui/buttons";
@@ -11,6 +11,9 @@ const RootHome = styled.div`
   background-color: #9f9a8d;
   width: 100%;
   height: auto;
+  @media (min-width: 815px) {
+    max-width: 425px;
+  }
 `;
 
 const Header = styled.div`
@@ -24,8 +27,12 @@ const Header = styled.div`
 const ImageContainer = styled.div`
   width: 100%;
   min-height: 233px;
-  height: 100%;
+  height: calc(100vw - 300px);
   position: relative;
+  @media (min-width: 815px) {
+    min-height: 200px;
+    height: 200px;
+  }
 `;
 
 const Text = styled.div`
@@ -54,20 +61,44 @@ export function CardHome({ title, src, body }: CardHomeProps) {
 }
 
 //REDIRECT CARD
-
+const SliceAnimation = keyframes`
+  0% {transform: translateY(100vh);} 
+  100% {transform: translateY(-25px);} 
+`;
 const RootRedirect = styled.div`
   display: flex;
   flex-direction: column;
   background-color: var(--cream);
   height: 335px;
   width: 100%;
+  &.animated {
+    animation: ${SliceAnimation} 1.5s ease-out;
+  }
 `;
 
 const RedirectImgContainer = styled.div`
   width: 100%;
   min-height: 233px;
-  height: 260px;
+  /* height: 260px; */
+  height: calc(100vw - 300px);
   position: relative;
+  /* @media (min-width: 815px) {
+    min-height: 233px;
+    height: 233px;
+  } */
+`;
+
+const BounceZommAnimation = keyframes`
+  0%,  100% {
+        animation-timing-function: ease-out;
+        transform: scale(1) translate(20px, -50px);
+        /* transform: translate(20px, -50px); */
+    }
+    50% {
+        animation-timing-function: ease-in;
+        transform: scale(1.1) translate(20px, -50px);
+        /* transform: translate(20px, -50px); */
+    }
 `;
 
 const RedirectBox = styled.div`
@@ -81,14 +112,25 @@ const RedirectBox = styled.div`
   padding: 20px;
   transform: translate(20px, -50px);
   border-radius: 3px;
+  animation: ${BounceZommAnimation} 1s ease-out;
+  animation-delay: 1.5s;
+  & > button {
+    cursor: pointer;
+  }
 `;
 
 type CardRedirectProps = {
   src: StaticImageData;
   title: string;
+  path: string;
 };
 
-export function CardRedirect({ title, src }: CardRedirectProps) {
+export function CardRedirect({ title, src, path }: CardRedirectProps) {
+  const router = useRouter();
+  function handleClick() {
+    router.push({ pathname: "/" + path });
+  }
+
   return (
     <RootRedirect>
       <RedirectImgContainer>
@@ -96,7 +138,7 @@ export function CardRedirect({ title, src }: CardRedirectProps) {
       </RedirectImgContainer>
       <RedirectBox>
         <Large>{title}</Large>
-        <ButtonPrimary>VER</ButtonPrimary>
+        <ButtonPrimary onClick={handleClick}>VER</ButtonPrimary>
       </RedirectBox>
     </RootRedirect>
   );

@@ -2,6 +2,9 @@ import styled, { keyframes } from "styled-components";
 
 export const Root = styled.div`
   display: flex;
+  @media (min-width: 815px) {
+    display: none;
+  }
 `;
 
 const animation = keyframes`
@@ -25,7 +28,7 @@ export const Dropdown = styled.div`
   position: absolute;
   width: 100%;
   background-color: var(--cream);
-  top: 70px;
+  top: 60px;
   left: 0px;
   animation: ${animation} 0.3s ease-in;
 `;

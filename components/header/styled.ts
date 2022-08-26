@@ -5,7 +5,7 @@ export const Root = styled.div`
   background-color: var(--cream);
   display: flex;
   flex-direction: row;
-  padding: 15px;
+  padding: 10px;
   justify-content: space-between;
   align-items: center;
   position: sticky;
@@ -25,4 +25,20 @@ export const WhatsappLogo = styled.div`
   right: 25px;
   background-color: var(--white);
   border-radius: 50%;
+`;
+
+export const NavLeft = styled.div`
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  @media (min-width: 815px) {
+    display: flex;
+  }
+  & > p {
+    padding: 15px;
+    :hover {
+      background-color: var(--white);
+      cursor: pointer;
+    }
+  }
 `;

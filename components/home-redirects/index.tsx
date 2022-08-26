@@ -1,28 +1,51 @@
 import Image from "next/image";
-import { CardsContainer, ImageContainer, Root } from "./styled";
 import pileta from "public/back-pileta.png";
-import { Large, Subtitle } from "ui/typography";
+import { useState } from "react";
+import handleViewport from "react-in-viewport";
 import { CardRedirect } from "ui/cards";
+import { Subtitle } from "ui/typography";
+import { CardsContainer, ImageContainer, Root } from "./styled";
 import aloj from "/public/aloj.png";
 import serv from "/public/serv.png";
 import ubic from "/public/ubic.png";
 
 export default function HomeRedirects() {
+  const [animate, setAnimate] = useState(false);
+
+  const Block = ({ forwardedRef }: any) => {
+    return (
+      <CardsContainer className={animate ? "animated" : ""} ref={forwardedRef}>
+        <CardRedirect
+          title="ALOJAMIENTO"
+          src={aloj}
+          path="alojamientos"
+        ></CardRedirect>
+        <CardRedirect
+          title="SERVICIOS"
+          src={serv}
+          path="servicios"
+        ></CardRedirect>
+        <CardRedirect
+          title="UBICACION"
+          src={ubic}
+          path="ubicacion"
+        ></CardRedirect>
+      </CardsContainer>
+    );
+  };
+
+  const ViewportBlock = handleViewport(Block);
+
   return (
     <Root>
       <ImageContainer>
         <Image src={pileta} layout="fill" objectFit="cover"></Image>
         <Subtitle weight="600">VIVÍ Y SENTÍ LA ESENCIA DE LO NATURAL</Subtitle>
-        <Large color="var(--white)">
-          NOS ENCONTRAMOS EN MEDIO DE LAS SIERRAS, SOLO CRUZANDO LA CALLE ESTAS
-          A ORILLAS DEL RÍO
-        </Large>
       </ImageContainer>
-      <CardsContainer>
-        <CardRedirect title="ALOJAMIENTO" src={aloj}></CardRedirect>
-        <CardRedirect title="SERVICIOS" src={serv}></CardRedirect>
-        <CardRedirect title="UBICACION" src={ubic}></CardRedirect>
-      </CardsContainer>
+      <ViewportBlock
+        onEnterViewport={() => setAnimate(true)}
+        onLeaveViewport={() => setAnimate(false)}
+      ></ViewportBlock>
     </Root>
   );
 }

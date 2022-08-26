@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 export const Root = styled.section`
   display: flex;
   flex-direction: column;
@@ -29,14 +29,25 @@ export const ImageContainer = styled.div`
     right: 0;
     margin: auto;
     text-align: center;
-    background-color: var(--gray-weak);
+    background-color: rgba(265, 265, 265, 0.4);
     padding: 10px;
   }
 `;
-
-export const CardsContainer = styled.div`
+const SliceAnimation = keyframes`
+  0% {transform: translateY(100vh);} 
+  100% {transform: translateY(-25px);} 
+`;
+export const CardsContainer: any = styled.div`
+  transform: translatey(-25px);
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  transform: translate(0, -50px);
+  gap: 15px;
+  &.animated {
+    animation: ${SliceAnimation} 1.5s ease-out;
+  }
+  @media (min-width: 815px) {
+    flex-direction: row;
+    justify-content: center;
+  }
 `;

@@ -1,10 +1,6 @@
+import { getImageContentful } from "controllers/contentful";
 import { contentFetcher } from "lib";
 import useSWRImmutable from "swr";
-import {
-  getImageContentful,
-  getMultipleImagesContentful,
-} from "controllers/contentful";
-import { useRouter } from "next/router";
 
 export function useAlojamientos() {
   const { data, error } = useSWRImmutable("alojamientos", contentFetcher);

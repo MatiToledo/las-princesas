@@ -1,7 +1,7 @@
 import { useAlojamientos } from "hooks";
 import { CardAlojamiento } from "ui/cards";
 import { Title } from "ui/typography";
-import { Banner, CardsContainer, Root } from "./styled";
+import { CardsContainer, Root } from "./styled";
 
 export default function AlojamientosComp() {
   const alojamientos = useAlojamientos();

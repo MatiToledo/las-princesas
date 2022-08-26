@@ -9,6 +9,7 @@ import InstagramSVG from "./instagram.svg";
 import MailSVG from "./mail.svg";
 import PhoneSVG from "./phone.svg";
 import UbicSVG from "./map.svg";
+import ContactSVG from "./contact.svg";
 import { Body } from "ui/typography";
 import Image, { StaticImageData } from "next/image";
 
@@ -23,6 +24,18 @@ export const Close = styled(CloseIcon)`
   width: 20px;
   height: 20px;
 `;
+
+export const Contact = styled(ContactSVG)`
+  display: flex;
+  min-width: 350px;
+  min-height: 350px;
+  width: 350px;
+  height: 350px;
+  @media (max-width: 815px) {
+    display: none;
+  }
+`;
+
 export const Prev = styled(PrevIcon)`
   display: flex;
   justify-content: center;
