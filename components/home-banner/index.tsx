@@ -1,10 +1,19 @@
+import { useRouter } from "next/router";
 import { ButtonPrimary } from "ui/buttons";
 import { Title } from "ui/typography";
 import { Box, BoxButton, Root } from "./styled";
 
-export default function HomeBanner({ type }: any) {
+export default function HomeBanner({ type, path }: any) {
+  const router = useRouter();
+  function handleClick() {
+    router.push({ pathname: `/${path}` });
+  }
+
   return (
-    <Root align={type == "pileta" ? "5%" : "50%"}>
+    <Root
+      left={type == "pileta" ? "5%" : ""}
+      right={type == "pileta" ? "" : "5%"}
+    >
       <Box>
         <Title align="left">
           {type == "pileta"
@@ -13,7 +22,7 @@ export default function HomeBanner({ type }: any) {
         </Title>
       </Box>
       <BoxButton>
-        <ButtonPrimary>
+        <ButtonPrimary onClick={handleClick}>
           {type == "pileta" ? "SERVICIOS" : "ALOJAMIENTOS"}
         </ButtonPrimary>
       </BoxButton>

@@ -18,6 +18,7 @@ export default function HomeMain() {
   return (
     <Root>
       <Carousel
+        pauseOnHover={false}
         renderCenterLeftControls={({ previousSlide }) => null}
         renderCenterRightControls={({ nextSlide }) => null}
         defaultControlsConfig={{
@@ -42,11 +43,15 @@ export default function HomeMain() {
             objectFit="cover"
             priority={true}
           ></Image>
-          {slider == true ? <HomeBanner type="pileta"></HomeBanner> : null}
+          {slider == true ? (
+            <HomeBanner type="pileta" path="servicios"></HomeBanner>
+          ) : null}
         </ImageContainer>
         <ImageContainer>
           <Image src={parqueHome} layout="fill" objectFit="cover"></Image>
-          {slider == false ? <HomeBanner type="parque"></HomeBanner> : null}
+          {slider == false ? (
+            <HomeBanner type="parque" path="alojamientos"></HomeBanner>
+          ) : null}
         </ImageContainer>
       </Carousel>
     </Root>

@@ -24,7 +24,8 @@ export const Root: any = styled.div`
   top: 50%;
   transform: translate(0, -50%);
   @media (min-width: 515px) {
-    left: ${(props: any) => props.align};
+    left: ${(props: any) => props.left};
+    right: ${(props: any) => props.right};
   }
 `;
 

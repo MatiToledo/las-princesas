@@ -8,6 +8,7 @@ export const BaseButoon = styled.button`
   border-radius: 6px;
   border: solid 1px var(--white);
   padding: 10px 20px;
+  cursor: pointer;
 
   & > p {
     font-family: "Lato", sans-serif;
