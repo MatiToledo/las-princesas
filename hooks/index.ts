@@ -14,6 +14,7 @@ export function useAlojamientos() {
       description: item.fields.description,
       img,
       path: item.fields.path,
+      order: item.fields.order,
     };
   });
 
@@ -35,24 +36,4 @@ export function useServicios() {
   });
 
   return servicios;
-}
-export function useComplejoFotos() {
-  const { data, error } = useSWRImmutable("complejo", contentFetcher);
-  const assets = data?.includes.Asset;
-
-  const fotos = data?.items[0].fields.images.map((image: any) => {
-    const assetId = image.sys.id;
-    const asset = assets.find((assetItem: any) => {
-      const id = assetItem.sys.id;
-
-      if (id === assetId) return true;
-    });
-    const img = "https:" + asset.fields.file.url;
-    return {
-      img,
-      id: image.sys.id,
-    };
-  });
-
-  return fotos;
 }

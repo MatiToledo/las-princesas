@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 export const Root = styled.div`
   display: flex;
-  @media (min-width: 815px) {
+  @media (min-width: 992px) {
     display: none;
   }
 `;

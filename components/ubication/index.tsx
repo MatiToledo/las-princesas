@@ -1,10 +1,19 @@
-import { MapContainer, Root } from "./styled";
+import { Content, MapContainer, Root } from "./styled";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef, useState } from "react";
 import { Body, Title } from "ui/typography";
+import ubic1 from "public/ubic-1.jpeg";
+import ubic2 from "public/ubic-2.jpeg";
+import ubic3 from "public/ubic-3.jpeg";
+import ubic4 from "public/ubic-4.jpeg";
+import ubic5 from "public/ubic-5.jpeg";
+import Carousel from "components/carousel";
+
 const mapboxgl = require("mapbox-gl");
 mapboxgl.accessToken =
   "pk.eyJ1IjoibWF0aS10b2xlZG8iLCJhIjoiY2t1cG1qam83MDJsaTMxbWc3eHVyenVkeiJ9.HkGvX59y8Azu1LzbFDoemw";
+
+const images = [ubic1, ubic2, ubic3, ubic4, ubic5];
 
 export default function Ubication() {
   const mapContainer = useRef(null);
@@ -43,7 +52,10 @@ export default function Ubication() {
         entorno natural, sus hermosas vistas al paisaje serrano y su cercanía a
         los principales atractivos de la zona.{" "}
       </Body>
-      <MapContainer ref={mapContainer} />
+      <Content>
+        <MapContainer ref={mapContainer} />
+        <Carousel images={images}></Carousel>
+      </Content>
     </Root>
   );
 }

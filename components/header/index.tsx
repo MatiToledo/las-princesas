@@ -15,7 +15,13 @@ export default function Header() {
 
   return (
     <Root>
-      <Image src={logo} width={40} height={40} onClick={handleLogo}></Image>
+      <Image
+        src={logo}
+        width={40}
+        height={40}
+        onClick={handleLogo}
+        style={{ cursor: "pointer" }}
+      ></Image>
       <Menu></Menu>
       <NavLeft>
         <Link href={"/alojamientos"}>

@@ -31,7 +31,7 @@ export const NavLeft = styled.div`
   display: none;
   flex-direction: row;
   justify-content: space-between;
-  @media (min-width: 815px) {
+  @media (min-width: 992px) {
     display: flex;
   }
   & > p {

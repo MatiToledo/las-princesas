@@ -151,21 +151,36 @@ const RootAlojamiento = styled.div`
   flex-direction: column;
   gap: 15px;
   align-items: center;
+  position: relative;
+  justify-content: space-between;
+  max-width: 365px;
 
   ::before {
+    position: absolute;
     content: "";
+    top: -10px;
     width: 75%;
     height: 1px;
     background-color: var(--gray-weak);
-    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 400px;
+    ::before {
+      display: none;
+    }
   }
 `;
 
 const AlojamientoImgContainer = styled.div`
   width: 100%;
   min-height: 233px;
-  height: 260px;
+  height: 233px;
   position: relative;
+  @media (min-width: 815px) {
+    height: 233px;
+    /* max-width: 370px; */
+  }
 `;
 
 type CardAlojamientoProps = {
@@ -189,7 +204,12 @@ export function CardAlojamiento({
   return (
     <RootAlojamiento>
       <AlojamientoImgContainer>
-        <Image src={src} layout="fill" objectFit="cover"></Image>
+        <Image
+          src={src}
+          layout="fill"
+          objectFit="cover"
+          onClick={handleClick}
+        ></Image>
       </AlojamientoImgContainer>
       <Subtitle color="var(--gray-weak)">{title}</Subtitle>
       <Body align="left">{description}</Body>
@@ -203,15 +223,36 @@ export function CardAlojamiento({
 const RootService = styled.div`
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: 15px;
   align-items: center;
+  max-width: 365px;
 
   ::before {
     content: "";
     width: 75%;
     height: 1px;
     background-color: var(--gray-weak);
-    position: relative;
+    position: absolute;
+    top: -10px;
+  }
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    max-width: 550px;
+
+    ::before {
+      display: none;
+    }
+
+    ::after {
+      content: "";
+      background-color: var(--cream);
+      width: 200%;
+      height: 1px;
+      position: absolute;
+      bottom: -20px;
+    }
   }
 `;
 
@@ -220,6 +261,24 @@ const ServiceImgContainer = styled.div`
   min-height: 233px;
   height: 260px;
   position: relative;
+  @media (min-width: 1200px) {
+    width: 300px;
+    min-height: 200px;
+    height: 200px;
+  }
+`;
+
+const ServiceTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  @media (min-width: 1200px) {
+    width: 320px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+  }
 `;
 
 type CardServiceProps = {
@@ -234,8 +293,10 @@ export function CardService({ title, description, src }: CardServiceProps) {
       <ServiceImgContainer>
         <Image src={src} layout="fill" objectFit="cover"></Image>
       </ServiceImgContainer>
-      <Subtitle color="var(--gray-weak)">{title}</Subtitle>
-      <Body align="left">{description}</Body>
+      <ServiceTextContainer>
+        <Subtitle color="var(--gray-weak)">{title}</Subtitle>
+        <Body align="left">{description}</Body>
+      </ServiceTextContainer>
     </RootService>
   );
 }

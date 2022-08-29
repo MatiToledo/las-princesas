@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Root = styled.div`
+export const Root = styled.span`
   height: 400px;
   width: 100%;
 `;
