@@ -19,12 +19,13 @@ export const CardsContainer = styled.div`
 `;
 
 export const Container = styled.div`
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 30px;
 
   @media (min-width: 768px) {
-    gap: 20px;
+    gap: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }

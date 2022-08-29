@@ -154,19 +154,20 @@ const RootAlojamiento = styled.div`
   position: relative;
   justify-content: space-between;
   max-width: 365px;
-
-  ::before {
-    position: absolute;
+  ::after {
     content: "";
-    top: -10px;
-    width: 75%;
+    background-color: var(--cream);
+    width: 200%;
     height: 1px;
-    background-color: var(--gray-weak);
+    position: absolute;
+    bottom: -15px;
   }
 
   @media (min-width: 768px) {
     max-width: 400px;
-    ::before {
+  }
+  @media (min-width: 992px) {
+    ::after {
       display: none;
     }
   }
@@ -228,31 +229,24 @@ const RootService = styled.div`
   align-items: center;
   max-width: 365px;
 
-  ::before {
+  ::after {
     content: "";
-    width: 75%;
+    background-color: var(--cream);
+    width: 200%;
     height: 1px;
-    background-color: var(--gray-weak);
     position: absolute;
-    top: -10px;
+    bottom: -15px;
+  }
+
+  @media (min-width: 992px) {
+    ::after {
+      bottom: -20px;
+    }
   }
 
   @media (min-width: 1200px) {
     flex-direction: row;
     max-width: 550px;
-
-    ::before {
-      display: none;
-    }
-
-    ::after {
-      content: "";
-      background-color: var(--cream);
-      width: 200%;
-      height: 1px;
-      position: absolute;
-      bottom: -20px;
-    }
   }
 `;
 
