@@ -10,7 +10,12 @@ export default function ComplejoFotos({ images }: any) {
         {images.map((a: any) => {
           return (
             <PhotoImgContainer key={a.id}>
-              <Image src={a.img} layout="fill" objectFit="cover"></Image>
+              <Image
+                src={a.img}
+                layout="fill"
+                objectFit="cover"
+                alt={a}
+              ></Image>
             </PhotoImgContainer>
           );
         })}

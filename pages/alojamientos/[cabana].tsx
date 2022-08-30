@@ -2,10 +2,14 @@ import CabanaComp from "components/cabana";
 import Footer from "components/footer";
 import Header from "components/header";
 import { getCabanaData } from "controllers/contentful";
+import Head from "next/head";
 
 export default function CabanaPage({ cabana }: any) {
   return (
     <div>
+      <Head>
+        <title>Las Princesas | {cabana.title}</title>
+      </Head>
       <Header></Header>
       <CabanaComp cabana={cabana}></CabanaComp>
       <Footer></Footer>

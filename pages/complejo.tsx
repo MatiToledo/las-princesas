@@ -2,10 +2,14 @@ import ComplejoFotos from "components/complejo-fotos";
 import Footer from "components/footer";
 import Header from "components/header";
 import { getComplejoImages } from "controllers/contentful";
+import Head from "next/head";
 
 export default function ComplejoPage({ images }: any) {
   return (
     <div>
+      <Head>
+        <title>Las Princesas | Parque</title>
+      </Head>
       <Header></Header>
       <ComplejoFotos images={images}></ComplejoFotos>
       <Footer></Footer>

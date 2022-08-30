@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import logo from "public/logo.png";
-import { Body, Large } from "ui/typography";
+import { Body } from "ui/typography";
 import { NavLeft, Root } from "./styled";
 
 export default function Header() {
@@ -20,6 +20,7 @@ export default function Header() {
         width={40}
         height={40}
         onClick={handleLogo}
+        alt="logo"
         style={{ cursor: "pointer" }}
       ></Image>
       <Menu></Menu>

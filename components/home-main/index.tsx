@@ -42,13 +42,19 @@ export default function HomeMain() {
             layout="fill"
             objectFit="cover"
             priority={true}
+            alt="pileta"
           ></Image>
           {slider == true ? (
             <HomeBanner type="pileta" path="servicios"></HomeBanner>
           ) : null}
         </ImageContainer>
         <ImageContainer>
-          <Image src={parqueHome} layout="fill" objectFit="cover"></Image>
+          <Image
+            src={parqueHome}
+            layout="fill"
+            objectFit="cover"
+            alt="parque"
+          ></Image>
           {slider == false ? (
             <HomeBanner type="parque" path="alojamientos"></HomeBanner>
           ) : null}

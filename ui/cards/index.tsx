@@ -51,7 +51,7 @@ export function CardHome({ title, src, body }: CardHomeProps) {
         <Subtitle>{title}</Subtitle>
       </Header>
       <ImageContainer>
-        <Image src={src} layout="fill" objectFit="cover"></Image>
+        <Image src={src} layout="fill" objectFit="cover" alt={title}></Image>
       </ImageContainer>
       <Text>
         <Body color="var(--white)">{body}</Body>
@@ -134,7 +134,7 @@ export function CardRedirect({ title, src, path }: CardRedirectProps) {
   return (
     <RootRedirect>
       <RedirectImgContainer>
-        <Image src={src} layout="fill" objectFit="cover"></Image>
+        <Image src={src} layout="fill" objectFit="cover" alt={title}></Image>
       </RedirectImgContainer>
       <RedirectBox>
         <Large>{title}</Large>
@@ -287,7 +287,7 @@ export function CardService({ title, description, src }: CardServiceProps) {
   return (
     <RootService>
       <ServiceImgContainer>
-        <Image src={src} layout="fill" objectFit="cover"></Image>
+        <Image src={src} layout="fill" objectFit="cover" alt={title}></Image>
       </ServiceImgContainer>
       <ServiceTextContainer>
         <Subtitle color="var(--gray-weak)">{title}</Subtitle>

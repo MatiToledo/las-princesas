@@ -39,7 +39,12 @@ export default function HomeRedirects() {
   return (
     <Root>
       <ImageContainer>
-        <Image src={pileta} layout="fill" objectFit="cover"></Image>
+        <Image
+          src={pileta}
+          layout="fill"
+          objectFit="cover"
+          alt="back-pileta"
+        ></Image>
         <Subtitle weight="600">VIVÍ Y SENTÍ LA ESENCIA DE LO NATURAL</Subtitle>
       </ImageContainer>
       <ViewportBlock
