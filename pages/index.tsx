@@ -13,6 +13,12 @@ export default function Home() {
     <div>
       <Head>
         <title>Las Princesas</title>
+        <meta name="title" content="Cabañas Las Princesas"></meta>
+        <meta
+          name="keywords"
+          content="Cabañas, Las Princesas, Cabañas Las Princesas, Los Reartes, Frente al rio, Apart, Club House, Pileta, Quincho Juegos, Quincho Comida"
+        ></meta>
+        <meta httpEquiv="languaje" content="es"></meta>
       </Head>
       <Header></Header>
       <HomeMain></HomeMain>
