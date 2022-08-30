@@ -31,6 +31,7 @@ export default function CarouselComp({ images }: any) {
                 layout="fill"
                 objectFit="cover"
                 alt={a}
+                loading="eager"
               ></Image>
             </ImageContainer>
           );

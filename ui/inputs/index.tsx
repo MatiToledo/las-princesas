@@ -31,16 +31,7 @@ export const Input = styled.input.attrs((props: any) => ({
   }
 `;
 
-export function TextField({ label, placeholder }: any) {
-  return (
-    <Label>
-      {label}
-      <Input placeholder={placeholder}></Input>
-    </Label>
-  );
-}
-
-const Textarea = styled.textarea`
+export const Textarea = styled.textarea`
   border-radius: 5px;
   border: 1px solid var(--gray-weak);
   width: 100%;
@@ -60,12 +51,3 @@ const Textarea = styled.textarea`
     border: 1px solid var(--gray-weak);
   }
 `;
-
-export function TextArea({ label, placeholder }: any) {
-  return (
-    <Label>
-      {label}
-      <Textarea placeholder={placeholder}></Textarea>
-    </Label>
-  );
-}
