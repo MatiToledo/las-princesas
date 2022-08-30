@@ -1,11 +1,11 @@
 import { sweetAlert } from "lib/alert";
 import { sendEmailApi } from "lib/api";
 import { useForm } from "react-hook-form";
-import { ButtonPrimary } from "ui/buttons";
+import { ButtonPrimary, ButtonSecondary } from "ui/buttons";
 import { Contact } from "ui/icons";
 import { Input, Label, Textarea } from "ui/inputs";
 import { Subtitle } from "ui/typography";
-import { Content, FormContainer, Root } from "./styled";
+import { Content, FormContainer, Info, Root, Row } from "./styled";
 
 export default function ContactForm() {
   const {
@@ -33,7 +33,6 @@ export default function ContactForm() {
         Consultános
       </Subtitle>
       <Content>
-        <Contact></Contact>
         <FormContainer>
           <form onSubmit={handleSubmit(handleForm)}>
             <span>
@@ -50,14 +49,48 @@ export default function ContactForm() {
                 {...register("email", { required: true })}
               ></Input>
             </span>
+            <Info>
+              <Row>
+                <span>
+                  <Label>Desde</Label>
+                  <Input
+                    type="date"
+                    {...register("from", { required: true })}
+                  ></Input>
+                </span>
+                <span>
+                  <Label>Hasta</Label>
+                  <Input
+                    type="date"
+                    {...register("until", { required: true })}
+                  ></Input>
+                </span>
+              </Row>
+              <Row>
+                <span>
+                  <Label>Adultos</Label>
+                  <Input
+                    type="number"
+                    {...register("adults", { required: true })}
+                  ></Input>
+                </span>
+                <span>
+                  <Label>Menores</Label>
+                  <Input
+                    type="number"
+                    {...register("kids", { required: true })}
+                  ></Input>
+                </span>
+              </Row>
+            </Info>
             <span>
-              <Label>Nombre</Label>
+              <Label>Información adicional</Label>
               <Textarea
                 placeholder="Ingrese su mensaje"
                 {...register("message", { required: true })}
               ></Textarea>
             </span>
-            <ButtonPrimary>ENVIAR</ButtonPrimary>
+            <ButtonSecondary>ENVIAR</ButtonSecondary>
           </form>
         </FormContainer>
       </Content>

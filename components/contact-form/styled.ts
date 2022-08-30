@@ -8,7 +8,6 @@ export const Root = styled.div`
   align-items: center;
   background-color: var(--yellow);
   width: 100%;
-  height: 480px;
   padding: 20px;
 
   & > form {
@@ -22,6 +21,19 @@ export const Content = styled.div`
     display: flex;
     justify-content: center;
   }
+`;
+
+export const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+`;
+
+export const Row = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 `;
 
 export const FormContainer = styled.div`

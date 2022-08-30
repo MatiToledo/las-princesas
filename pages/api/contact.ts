@@ -8,6 +8,10 @@ let bodySchema = yup
   .shape({
     name: yup.string(),
     email: yup.string(),
+    from: yup.string(),
+    until: yup.string(),
+    adults: yup.string(),
+    kids: yup.string(),
     message: yup.string(),
   })
   .noUnknown(true)

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Body } from "ui/typography";
 
-export const BaseButoon = styled.button`
+export const BaseButton = styled.button`
   background-color: var(--yellow);
   width: 100%;
   height: 38px;
@@ -15,10 +15,22 @@ export const BaseButoon = styled.button`
   }
 `;
 
+export const SecondButton = styled(BaseButton)`
+  background-color: var(--gray-strong);
+  border: solid 1px var(--gray-weak);
+`;
+
 export function ButtonPrimary({ children, onClick }: any) {
   return (
-    <BaseButoon onClick={onClick}>
+    <BaseButton onClick={onClick}>
       <Body color="var(--white)">{children}</Body>
-    </BaseButoon>
+    </BaseButton>
+  );
+}
+export function ButtonSecondary({ children, onClick }: any) {
+  return (
+    <SecondButton onClick={onClick}>
+      <Body color="var(--white)">{children}</Body>
+    </SecondButton>
   );
 }

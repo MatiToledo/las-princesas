@@ -20,9 +20,10 @@ export const Input = styled.input.attrs((props: any) => ({
   border: 1px solid var(--gray-weak);
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
+  color: var(--gray-strong);
 
   ::placeholder {
-    color: var(--gray-weak);
+    color: var(--gray-strong);
   }
 
   :focus {
@@ -41,9 +42,10 @@ export const Textarea = styled.textarea`
   padding: 8px;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
+  color: var(--gray-strong);
 
   ::placeholder {
-    color: var(--gray-weak);
+    color: var(--gray-strong);
   }
 
   :focus {

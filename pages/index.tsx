@@ -15,6 +15,10 @@ export default function Home() {
         <title>Las Princesas</title>
         <meta name="title" content="Cabañas Las Princesas"></meta>
         <meta
+          name="description"
+          content="Complejo de Cabañas Las Princesas ubicado frente al rio en Los Reartes, Capilla Vieja"
+        ></meta>
+        <meta
           name="keywords"
           content="Cabañas, Las Princesas, Cabañas Las Princesas, Los Reartes, Frente al rio, Apart, Club House, Pileta, Quincho Juegos, Quincho Comida"
         ></meta>
