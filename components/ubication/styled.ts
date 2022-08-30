@@ -31,6 +31,6 @@ export const Content = styled.div`
 `;
 
 export const MapContainer = styled.div`
-  height: 400px;
+  height: 100%;
   width: 100%;
 `;

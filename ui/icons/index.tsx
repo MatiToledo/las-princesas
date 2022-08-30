@@ -127,23 +127,29 @@ export function Ubication() {
 
 //SERVICES CARD
 
-const RootServices = styled.div`
+const RootServices: any = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 15px;
-  width: 150px;
+  width: ${(props: any) => props.width};
 `;
 
 type CardServiceProps = {
   src: StaticImageData;
   body: string;
+  type?: string;
 };
-export function IconService({ src, body }: CardServiceProps) {
+export function IconService({ src, body, type }: CardServiceProps) {
   return (
-    <RootServices>
-      <Image src={src} width={100} height={100} layout="fixed"></Image>
+    <RootServices width={type == "small" ? "90px" : "150px"}>
+      <Image
+        src={src}
+        width={type == "small" ? 60 : 100}
+        height={type == "small" ? 60 : 100}
+        layout="fixed"
+      ></Image>
       <Body>{body}</Body>
     </RootServices>
   );

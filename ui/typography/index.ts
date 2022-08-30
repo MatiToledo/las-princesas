@@ -40,6 +40,17 @@ export const Body: any = styled.p`
 export const Caracteristic = styled(Body)`
   background-color: var(--cream);
   padding: 15px 5px;
-  border-bottom: 1px solid #fff;
-  border-top: 1px solid #fff;
+  position: relative;
+  /* border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff; */
+  ::after {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    content: "";
+    width: 100%;
+    height: 2px;
+    border-radius: 50%;
+    background-color: var(--white);
+  }
 `;

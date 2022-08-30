@@ -9,8 +9,8 @@ export default function AlojamientosComp() {
     ?.sort((a: any, b: any) => a.order < b.order)
     .reverse();
 
-  const cabanas = sort?.slice(0, alojamientos.length / 2);
-  const aparts = sort?.slice(alojamientos.length / 2);
+  const aparts = sort?.slice(0, alojamientos.length / 2);
+  const cabanas = sort?.slice(alojamientos.length / 2);
 
   return (
     <Root>

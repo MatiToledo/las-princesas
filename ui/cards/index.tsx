@@ -178,6 +178,7 @@ const AlojamientoImgContainer = styled.div`
   min-height: 233px;
   height: 233px;
   position: relative;
+  cursor: pointer;
   @media (min-width: 815px) {
     height: 233px;
     /* max-width: 370px; */
@@ -210,6 +211,7 @@ export function CardAlojamiento({
           layout="fill"
           objectFit="cover"
           onClick={handleClick}
+          alt={title}
         ></Image>
       </AlojamientoImgContainer>
       <Subtitle color="var(--gray-weak)">{title}</Subtitle>
