@@ -13,18 +13,16 @@ export const Root = styled.section`
   z-index: 9999;
 `;
 
-export const WhatsappLogo = styled.div`
-  background-image: url("https://res.cloudinary.com/las-princesas-cabanas/image/upload/v1661039012/whatsapp_ulxrao.png");
+export const LogoContainer = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: none;
-  width: 58px;
-  height: 58px;
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: var(--white);
+  width: 40px;
+  height: 40px;
+
   border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
 `;
 
 export const NavLeft = styled.div`

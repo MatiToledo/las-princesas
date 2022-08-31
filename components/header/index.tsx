@@ -2,9 +2,9 @@ import Menu from "components/menu";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import logo from "public/logo.webp";
 import { Body } from "ui/typography";
-import { NavLeft, Root } from "./styled";
+import { LogoContainer, NavLeft, Root } from "./styled";
+import Logo from "public/Logo.webp";
 
 export default function Header() {
   const router = useRouter();
@@ -15,14 +15,16 @@ export default function Header() {
 
   return (
     <Root>
-      <Image
-        src={logo}
-        width={40}
-        height={40}
-        onClick={handleLogo}
-        alt="logo"
-        style={{ cursor: "pointer" }}
-      ></Image>
+      <LogoContainer>
+        <Image
+          src={Logo}
+          width={40}
+          height={40}
+          alt="Logo"
+          onClick={handleLogo}
+          layout="responsive"
+        ></Image>
+      </LogoContainer>
       <Menu></Menu>
       <NavLeft>
         <Link href={"/alojamientos"}>
