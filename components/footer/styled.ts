@@ -18,7 +18,7 @@ export const Social = styled.div`
 `;
 
 export const WhatsappLogo = styled.div`
-  background-image: url("https://res.cloudinary.com/las-princesas-cabanas/image/upload/v1661039012/whatsapp_ulxrao.png");
+  background-image: url("https://res.cloudinary.com/las-princesas-cabanas/image/upload/v1661975193/whatsapp_bguizo.webp");
   background-position: center;
   background-size: cover;
   background-repeat: none;
