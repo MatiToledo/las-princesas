@@ -1,7 +1,7 @@
 import { Whatsapp } from "ui/icons";
 import styled from "styled-components";
 
-export const Root = styled.div`
+export const Root = styled.section`
   background-color: var(--cream);
   display: flex;
   flex-direction: row;

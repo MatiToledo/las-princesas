@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-export const Root = styled.div`
+export const Root = styled.section`
   display: flex;
   @media (min-width: 992px) {
     display: none;

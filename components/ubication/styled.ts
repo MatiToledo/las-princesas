@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-export const Root = styled.div`
+export const Root = styled.section`
   display: flex;
-  /* min-height: calc(100vh - 70px); */
   justify-content: center;
   align-items: center;
   flex-direction: column;

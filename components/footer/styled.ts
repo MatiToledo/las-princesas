@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Root = styled.div`
+export const Root = styled.section`
   display: flex;
   flex-direction: column;
   height: 100px;
