@@ -205,9 +205,6 @@ export function CardAlojamiento({
   }
   return (
     <RootAlojamiento>
-      <Subtitle align="center" color="var(--gray-weak)">
-        {title}
-      </Subtitle>
       <AlojamientoImgContainer>
         <Image
           src={src}
@@ -217,6 +214,9 @@ export function CardAlojamiento({
           alt={title}
         ></Image>
       </AlojamientoImgContainer>
+      <Subtitle align="center" color="var(--gray-weak)">
+        {title}
+      </Subtitle>
       <Body align="left">{description}</Body>
       <ButtonPrimary onClick={handleClick}>VER MAS</ButtonPrimary>
     </RootAlojamiento>
