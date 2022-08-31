@@ -32,6 +32,7 @@ export function useServicios() {
       title: item.fields.title,
       description: item.fields.description,
       img,
+      order: item.fields.order,
     };
   });
 

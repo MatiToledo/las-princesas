@@ -5,6 +5,7 @@ import { CardsContainer, Root } from "./styled";
 
 export default function ServiciosComp() {
   const servicios = useServicios();
+  const sort = servicios?.sort((a: any, b: any) => a.order > b.order).reverse();
 
   return (
     <Root>
@@ -13,7 +14,7 @@ export default function ServiciosComp() {
         realidad
       </Title>
       <CardsContainer>
-        {servicios?.map((a: any) => {
+        {sort?.map((a: any) => {
           return (
             <CardService
               key={a.key}
