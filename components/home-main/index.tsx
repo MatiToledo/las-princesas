@@ -13,8 +13,6 @@ export default function HomeMain() {
     setSlider(!slider);
   }
 
-  // setTimeout(changeSlider, 5000);
-
   return (
     <Root>
       <Carousel
