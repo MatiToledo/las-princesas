@@ -70,7 +70,7 @@ export const PhoneIcon = styled(PhoneSVG)`
 `;
 export function Phone() {
   return (
-    <a href="tel:+54 9 351 564 2035">
+    <a href="tel:+54 9 351 564 2035" aria-label="Phone">
       <PhoneIcon></PhoneIcon>
     </a>
   );
@@ -82,7 +82,10 @@ export const FacebookIcon = styled(FacebookSVG)`
 `;
 export function Facebook() {
   return (
-    <a href="https://www.facebook.com/lasprincesas.cabanas">
+    <a
+      href="https://www.facebook.com/lasprincesas.cabanas"
+      aria-label="Facebook"
+    >
       <FacebookIcon></FacebookIcon>
     </a>
   );
@@ -94,7 +97,10 @@ export const InstagramIcon = styled(InstagramSVG)`
 `;
 export function Instagram() {
   return (
-    <a href="https://www.instagram.com/lasprincesas.cabanas/">
+    <a
+      href="https://www.instagram.com/lasprincesas.cabanas/"
+      aria-label="Instragram"
+    >
       <InstagramIcon></InstagramIcon>
     </a>
   );
@@ -107,7 +113,7 @@ export const MailIcon = styled(MailSVG)`
 `;
 export function Mail() {
   return (
-    <a href="mailto:lasprincesascabanasfrentealrio@gmail.com">
+    <a href="mailto:lasprincesascabanasfrentealrio@gmail.com" aria-label="Mail">
       <MailIcon></MailIcon>
     </a>
   );
@@ -119,7 +125,10 @@ export const UbicationIcon = styled(UbicSVG)`
 `;
 export function Ubication() {
   return (
-    <a href="https://www.google.com.ar/maps/place/Caba%C3%B1as+las+Princesas/@-31.9266585,-64.5980801,17z/data=!3m1!4b1!4m8!3m7!1s0x95d2b162e20f63ef:0xcd1a925e1472fd0f!5m2!4m1!1i2!8m2!3d-31.9266631!4d-64.5958914">
+    <a
+      href="https://www.google.com.ar/maps/place/Caba%C3%B1as+las+Princesas/@-31.9266585,-64.5980801,17z/data=!3m1!4b1!4m8!3m7!1s0x95d2b162e20f63ef:0xcd1a925e1472fd0f!5m2!4m1!1i2!8m2!3d-31.9266631!4d-64.5958914"
+      aria-label="Ubication"
+    >
       <UbicationIcon></UbicationIcon>
     </a>
   );

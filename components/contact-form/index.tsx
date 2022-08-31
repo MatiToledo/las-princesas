@@ -51,34 +51,42 @@ export default function ContactForm() {
             <Info>
               <Row>
                 <span>
-                  <Label>Desde</Label>
-                  <Input
-                    type="date"
-                    {...register("from", { required: true })}
-                  ></Input>
+                  <Label>
+                    Desde
+                    <Input
+                      type="date"
+                      {...register("from", { required: true })}
+                    ></Input>
+                  </Label>
                 </span>
                 <span>
-                  <Label>Hasta</Label>
-                  <Input
-                    type="date"
-                    {...register("until", { required: true })}
-                  ></Input>
+                  <Label>
+                    Hasta
+                    <Input
+                      type="date"
+                      {...register("until", { required: true })}
+                    ></Input>
+                  </Label>
                 </span>
               </Row>
               <Row>
                 <span>
-                  <Label>Adultos</Label>
-                  <Input
-                    type="number"
-                    {...register("adults", { required: true })}
-                  ></Input>
+                  <Label>
+                    Adultos
+                    <Input
+                      type="number"
+                      {...register("adults", { required: true })}
+                    ></Input>
+                  </Label>
                 </span>
                 <span>
-                  <Label>Menores</Label>
-                  <Input
-                    type="number"
-                    {...register("kids", { required: true })}
-                  ></Input>
+                  <Label>
+                    Menores
+                    <Input
+                      type="number"
+                      {...register("kids", { required: true })}
+                    ></Input>
+                  </Label>
                 </span>
               </Row>
             </Info>
