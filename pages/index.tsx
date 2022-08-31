@@ -25,6 +25,7 @@ export default function Home() {
           content="Cabañas,Las Princesas,Cabañas Las Princesas,Cabañas Los Reartes,Los Reartes,Frente al rio,Apart,Club House,Pileta,Quincho Juegos,Quincho Comida"
         ></meta>
         <meta httpEquiv="languaje" content="es"></meta>
+        <meta name="robots" content="index,follow" />
       </Head>
       <Header></Header>
       <HomeMain></HomeMain>
