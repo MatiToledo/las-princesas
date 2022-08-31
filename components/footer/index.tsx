@@ -18,6 +18,7 @@ export default function Footer() {
             src={whatsapp}
             width={58}
             height={58}
+            alt="whatsapp"
             layout="responsive"
           ></Image>
         </WhatsappLogo>
