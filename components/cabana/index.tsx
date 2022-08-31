@@ -1,6 +1,6 @@
 import CarouselComp from "components/carousel";
 import { IconService } from "ui/icons";
-import { Caracteristic, Large, Subtitle, Title } from "ui/typography";
+import { Caracteristic, Subtitle, Title } from "ui/typography";
 import {
   CaracteristicContainer,
   Content,

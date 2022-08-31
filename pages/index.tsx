@@ -3,8 +3,6 @@ import Footer from "components/footer";
 import HomeMain from "components/home-main";
 import HomeRedirects from "components/home-redirects";
 import HomeServices from "components/home-services";
-import { contentFetcher } from "lib";
-import { contentfulClient } from "lib/contentful";
 import Head from "next/head";
 import Header from "../components/header";
 
@@ -14,6 +12,10 @@ export default function Home() {
       <Head>
         <title>Las Princesas</title>
         <meta name="title" content="Cabañas Las Princesas"></meta>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        ></meta>
         <meta
           name="description"
           content="Complejo de Cabañas Las Princesas ubicado frente al rio en Los Reartes, Capilla Vieja"

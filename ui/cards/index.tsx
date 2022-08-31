@@ -160,7 +160,7 @@ const RootAlojamiento = styled.div`
     width: 200%;
     height: 1px;
     position: absolute;
-    bottom: -15px;
+    bottom: -25px;
   }
 
   @media (min-width: 768px) {
@@ -205,6 +205,9 @@ export function CardAlojamiento({
   }
   return (
     <RootAlojamiento>
+      <Subtitle align="center" color="var(--gray-weak)">
+        {title}
+      </Subtitle>
       <AlojamientoImgContainer>
         <Image
           src={src}
@@ -214,7 +217,6 @@ export function CardAlojamiento({
           alt={title}
         ></Image>
       </AlojamientoImgContainer>
-      <Subtitle color="var(--gray-weak)">{title}</Subtitle>
       <Body align="left">{description}</Body>
       <ButtonPrimary onClick={handleClick}>VER MAS</ButtonPrimary>
     </RootAlojamiento>
@@ -237,7 +239,7 @@ const RootService = styled.div`
     width: 200%;
     height: 1px;
     position: absolute;
-    bottom: -15px;
+    bottom: -25px;
   }
 
   @media (min-width: 992px) {
@@ -290,7 +292,9 @@ export function CardService({ title, description, src }: CardServiceProps) {
         <Image src={src} layout="fill" objectFit="cover" alt={title}></Image>
       </ServiceImgContainer>
       <ServiceTextContainer>
-        <Subtitle color="var(--gray-weak)">{title}</Subtitle>
+        <Subtitle align="center" color="var(--gray-weak)">
+          {title}
+        </Subtitle>
         <Body align="left">{description}</Body>
       </ServiceTextContainer>
     </RootService>

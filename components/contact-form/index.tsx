@@ -1,8 +1,7 @@
 import { sweetAlert } from "lib/alert";
 import { sendEmailApi } from "lib/api";
 import { useForm } from "react-hook-form";
-import { ButtonPrimary, ButtonSecondary } from "ui/buttons";
-import { Contact } from "ui/icons";
+import { ButtonSecondary } from "ui/buttons";
 import { Input, Label, Textarea } from "ui/inputs";
 import { Subtitle } from "ui/typography";
 import { Content, FormContainer, Info, Root, Row } from "./styled";

@@ -12,7 +12,7 @@ export const CardsContainer = styled.div`
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
   overflow: hidden;
 
   @media (min-width: 768px) {

@@ -22,7 +22,7 @@ export const Container = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
 
   @media (min-width: 768px) {
     gap: 30px;
