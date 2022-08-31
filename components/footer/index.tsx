@@ -2,6 +2,8 @@ import ReactWhatsapp from "react-whatsapp";
 import { Facebook, Instagram, Mail, Phone, Ubication } from "ui/icons";
 import { Body } from "ui/typography";
 import { Root, Social, WhatsappLogo } from "./styled";
+import whatsapp from "public/whatsapp.webp";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -11,7 +13,14 @@ export default function Footer() {
         message={`¡Hola! ${"\n"} Para brindarte una mejor atención, por favor complete la siguiente información: ${"\n"}- Fecha por la que desea consultar:${"\n"}- Cantidad de pasajeros (si hay menores, especificar la edad de cada menor):${"\n"}¡Gracias!`}
         element="div"
       >
-        <WhatsappLogo></WhatsappLogo>
+        <WhatsappLogo>
+          <Image
+            src={whatsapp}
+            width={58}
+            height={58}
+            layout="responsive"
+          ></Image>
+        </WhatsappLogo>
       </ReactWhatsapp>
       <Social>
         <Facebook />
