@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Body } from "ui/typography";
 import { LogoContainer, NavLeft, Root } from "./styled";
-import Logo from "public/Logo.webp";
+import logo from "public/logo-header.webp";
 
 export default function Header() {
   const router = useRouter();
@@ -17,7 +17,7 @@ export default function Header() {
     <Root>
       <LogoContainer>
         <Image
-          src={Logo}
+          src={logo}
           width={40}
           height={40}
           alt="Logo"
