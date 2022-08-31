@@ -2,7 +2,7 @@ import Menu from "components/menu";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import logo from "public/logo.png";
+import logo from "public/logo.webp";
 import { Body } from "ui/typography";
 import { NavLeft, Root } from "./styled";
 

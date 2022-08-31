@@ -292,9 +292,7 @@ export function CardService({ title, description, src }: CardServiceProps) {
         <Image src={src} layout="fill" objectFit="cover" alt={title}></Image>
       </ServiceImgContainer>
       <ServiceTextContainer>
-        <Subtitle align="center" color="var(--gray-weak)">
-          {title}
-        </Subtitle>
+        <Subtitle color="var(--gray-weak)">{title}</Subtitle>
         <Body align="left">{description}</Body>
       </ServiceTextContainer>
     </RootService>

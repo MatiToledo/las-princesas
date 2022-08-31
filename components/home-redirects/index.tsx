@@ -1,13 +1,13 @@
 import Image from "next/image";
-import pileta from "public/back-pileta.png";
+import pileta from "public/back-pileta.webp";
 import { useState } from "react";
 import handleViewport from "react-in-viewport";
 import { CardRedirect } from "ui/cards";
 import { Subtitle } from "ui/typography";
 import { CardsContainer, ImageContainer, Root } from "./styled";
-import aloj from "/public/aloj.png";
-import serv from "/public/serv.png";
-import ubic from "/public/ubic.png";
+import aloj from "/public/aloj.webp";
+import serv from "/public/serv.webp";
+import ubic from "/public/ubic.webp";
 
 export default function HomeRedirects() {
   const [animate, setAnimate] = useState(false);

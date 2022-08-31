@@ -1,8 +1,8 @@
 import HomeBanner from "components/home-banner";
 import Image from "next/image";
 import Carousel from "nuka-carousel";
-import piletaHome from "public/home.png";
-import parqueHome from "public/parque-home.png";
+import piletaHome from "public/home.webp";
+import parqueHome from "public/parque-home.webp";
 import { useState } from "react";
 import { ImageContainer, Root } from "./styled";
 

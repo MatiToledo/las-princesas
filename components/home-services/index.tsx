@@ -1,14 +1,14 @@
 import { CardHome } from "ui/cards";
 import { CardsHomeContainer, Header, Root, ServiceContainer } from "./styled";
-import alojamiento from "public/alojamiento.png";
-import relax from "public/relax.jpeg";
-import esparcimiento from "public/esparcimiento.jpeg";
-import desayuno from "public/desayuno.png";
-import limpieza from "public/limpieza.png";
-import wifi from "public/wifi.png";
-import espacios from "public/espacios.png";
-import juegos from "public/juegos.png";
-import quincho from "public/quincho.png";
+import alojamiento from "public/alojamiento.webp";
+import relax from "public/relax.webp";
+import esparcimiento from "public/esparcimiento.webp";
+import desayuno from "public/desayuno.webp";
+import limpieza from "public/limpieza.webp";
+import wifi from "public/wifi.webp";
+import espacios from "public/espacios.webp";
+import juegos from "public/juegos.webp";
+import quincho from "public/quincho.webp";
 import { Body, Title } from "ui/typography";
 import { IconService } from "ui/icons";
 

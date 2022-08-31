@@ -2,11 +2,11 @@ import { Content, MapContainer, Root } from "./styled";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef, useState } from "react";
 import { Body, Title } from "ui/typography";
-import ubic1 from "public/ubic-1.jpeg";
-import ubic2 from "public/ubic-2.jpeg";
-import ubic3 from "public/ubic-3.jpeg";
-import ubic4 from "public/ubic-4.jpeg";
-import ubic5 from "public/ubic-5.jpeg";
+import ubic1 from "public/ubic-1.webp";
+import ubic2 from "public/ubic-2.webp";
+import ubic3 from "public/ubic-3.webp";
+import ubic4 from "public/ubic-4.webp";
+import ubic5 from "public/ubic-5.webp";
 import Carousel from "components/carousel";
 
 const mapboxgl = require("mapbox-gl");

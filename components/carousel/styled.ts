@@ -6,7 +6,7 @@ export const Root = styled.span`
 
 export const ImageContainer = styled.div`
   width: 100%;
-  aspect-ratio: 0.94;
+  aspect-ratio: 0.9;
   position: relative;
   max-height: calc(100vh - 90px);
 `;

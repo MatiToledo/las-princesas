@@ -10,6 +10,8 @@ import {
 } from "./styled";
 
 export default function CabanaComp({ cabana }: any) {
+  console.log(cabana);
+
   return (
     <Root>
       <Title>{cabana.title}</Title>
