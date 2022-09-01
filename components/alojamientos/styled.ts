@@ -45,9 +45,10 @@ export const ContainerDesktop = styled.div`
   ::before {
     position: absolute;
     top: -25px;
-    left: -200px;
+    left: 50%;
+    transform: translate(-50%);
     content: "";
-    width: 200%;
+    width: 100vw;
     height: 210px;
     background-color: var(--cream);
   }
