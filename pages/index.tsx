@@ -26,6 +26,10 @@ export default function Home() {
         ></meta>
         <meta httpEquiv="languaje" content="es"></meta>
         <meta name="robots" content="index,follow" />
+        <meta
+          name="google-site-verification"
+          content="Q1DlyalI2pF1k_SOXqJW6dyZFKrw2azXOG7YbyzdwEA"
+        />
       </Head>
       <Header></Header>
       <HomeMain></HomeMain>
