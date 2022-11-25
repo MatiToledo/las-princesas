@@ -10,7 +10,7 @@ export default function Footer() {
     <Root>
       <ReactWhatsapp
         number="+54 9 351 564 2035"
-        message={`¡Hola! ${"\n"} Para brindarte una mejor atención, por favor complete la siguiente información: ${"\n"}- Fecha por la que desea consultar:${"\n"}- Cantidad de pasajeros (si hay menores, especificar la edad de cada menor):${"\n"}¡Gracias!`}
+        message={`¡Hola! Este consulta llega desde cabañaslasprincesas.com.ar`}
         element="div"
       >
         <WhatsappLogo>

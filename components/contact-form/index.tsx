@@ -1,5 +1,6 @@
 import { sweetAlert } from "lib/alert";
 import { sendEmailApi } from "lib/api";
+import moment from "moment";
 import { useForm } from "react-hook-form";
 import { ButtonSecondary } from "ui/buttons";
 import { Input, Label, Textarea } from "ui/inputs";
@@ -16,6 +17,9 @@ export default function ContactForm() {
   } = useForm();
 
   async function handleForm(data: any) {
+    data.until = moment(data.until).format("DD-MM-YYYY");
+    data.from = moment(data.from).format("DD-MM-YYYY");
+
     const emailSended = await sendEmailApi(data);
 
     if (emailSended) {
