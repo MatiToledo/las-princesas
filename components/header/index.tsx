@@ -22,8 +22,7 @@ export default function Header() {
           height={40}
           alt="Logo"
           onClick={handleLogo}
-          layout="responsive"
-        ></Image>
+          layout="responsive"></Image>
       </LogoContainer>
       <Menu></Menu>
       <NavLeft>
@@ -38,6 +37,9 @@ export default function Header() {
         </Link>
         <Link href={"/complejo"}>
           <Body>PARQUE</Body>
+        </Link>
+        <Link href={"/reservar"}>
+          <Body>RESERVAR</Body>
         </Link>
       </NavLeft>
     </Root>

@@ -22,8 +22,7 @@ export default function Menu() {
               onClick={() => {
                 router.push({ pathname: "/alojamientos" });
                 handleBurguer();
-              }}
-            >
+              }}>
               CABAÑAS Y APART
             </Body>
           </MenuOption>
@@ -33,8 +32,7 @@ export default function Menu() {
               onClick={() => {
                 router.push({ pathname: "/servicios" });
                 handleBurguer();
-              }}
-            >
+              }}>
               SERVICIOS
             </Body>
           </MenuOption>
@@ -44,8 +42,7 @@ export default function Menu() {
               onClick={() => {
                 router.push({ pathname: "/ubicacion" });
                 handleBurguer();
-              }}
-            >
+              }}>
               UBICACION - CONTACTO
             </Body>
           </MenuOption>
@@ -55,9 +52,18 @@ export default function Menu() {
               onClick={() => {
                 router.push({ pathname: "/complejo" });
                 handleBurguer();
-              }}
-            >
+              }}>
               PARQUE COMPLEJO
+            </Body>
+          </MenuOption>
+          <MenuOption>
+            <Body
+              align="left"
+              onClick={() => {
+                router.push({ pathname: "/complejo" });
+                handleBurguer();
+              }}>
+              RESERVAR
             </Body>
           </MenuOption>
         </Dropdown>

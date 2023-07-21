@@ -5,7 +5,7 @@ export const Root = styled.section`
   padding: 25px;
   flex-direction: column;
   overflow: hidden;
-  min-height: calc(100vh - 170px);
+  min-height: (100vh - 170px);
   justify-content: center;
 `;
 
