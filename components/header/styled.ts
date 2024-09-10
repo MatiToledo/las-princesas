@@ -39,4 +39,12 @@ export const NavLeft = styled.div`
       cursor: pointer;
     }
   }
+  & > a {
+    text-decoration: none;
+    padding: 15px;
+    :hover {
+      background-color: var(--white);
+      cursor: pointer;
+    }
+  }
 `;

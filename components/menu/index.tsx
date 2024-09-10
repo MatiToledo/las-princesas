@@ -57,14 +57,20 @@ export default function Menu() {
             </Body>
           </MenuOption>
           <MenuOption>
-            <Body
-              align="left"
-              onClick={() => {
-                router.push({ pathname: "/complejo" });
-                handleBurguer();
-              }}>
-              RESERVAR
-            </Body>
+            <a
+              href={
+                "https://www.alquilerargentina.com/alojamientos/uj56-Complejo-Las-Princesas-Caba%C3%B1as-Frente-al-Rio-Los-Reartes.html"
+              }
+              rel="noopener noreferrer"
+              target="_blank">
+              <Body
+                align="left"
+                onClick={() => {
+                  handleBurguer();
+                }}>
+                RESERVAR
+              </Body>
+            </a>
           </MenuOption>
         </Dropdown>
       ) : null}

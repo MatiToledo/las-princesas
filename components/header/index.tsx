@@ -38,9 +38,14 @@ export default function Header() {
         <Link href={"/complejo"}>
           <Body>PARQUE</Body>
         </Link>
-        <Link href={"/reservar"}>
+        <a
+          href={
+            "https://www.alquilerargentina.com/alojamientos/uj56-Complejo-Las-Princesas-Caba%C3%B1as-Frente-al-Rio-Los-Reartes.html"
+          }
+          rel="noopener noreferrer"
+          target="_blank">
           <Body>RESERVAR</Body>
-        </Link>
+        </a>
       </NavLeft>
     </Root>
   );

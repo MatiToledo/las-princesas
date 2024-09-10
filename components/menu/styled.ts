@@ -21,6 +21,9 @@ export const MenuOption = styled.a`
   padding: 12px 30px;
   border-bottom: 1px solid #e0e0e0;
   cursor: pointer;
+  & > a {
+    text-decoration: none;
+  }
 `;
 
 export const Dropdown = styled.div`
