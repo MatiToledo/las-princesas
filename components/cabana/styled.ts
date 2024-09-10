@@ -26,7 +26,7 @@ export const CaracteristicContainer = styled.div<{ cant: number }>`
   background-color: var(--cream);
   display: flex;
   flex-direction: column;
-  padding: 0 50px;
+  padding: 0px 50px 20px;
   justify-content: center;
   min-height: ${({ cant }) => `calc(${cant * 50}px + 150px)`};
   /* @media (min-width: 992px) {
