@@ -45,6 +45,7 @@ export function getCabanaData(data: any) {
     description: data?.items[0].fields.description,
     images,
     equipment,
+    googleDriveLink: data?.items[0].fields.googleDriveLink,
   };
 }
 

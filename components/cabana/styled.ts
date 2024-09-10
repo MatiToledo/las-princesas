@@ -21,15 +21,35 @@ export const Content = styled.div`
   }
 `;
 
-export const CaracteristicContainer = styled.div`
+export const CaracteristicContainer = styled.div<{ cant: number }>`
+  position: relative;
   background-color: var(--cream);
   display: flex;
   flex-direction: column;
   padding: 0 50px;
   justify-content: center;
+  min-height: ${({ cant }) => `calc(${cant * 50}px + 150px)`};
   /* @media (min-width: 992px) {
     justify-content: space-between;
   } */
+`;
+
+export const SeeMore = styled.a`
+  position: absolute;
+  bottom: 2%;
+  right: 50%;
+  transform: translateX(50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  background-color: var(--yellow);
+  height: 38px;
+  border-radius: 6px;
+  border: solid 1px var(--white);
+  padding: 10px 20px;
+  text-decoration: none;
 `;
 
 export const Equipament = styled.div`
