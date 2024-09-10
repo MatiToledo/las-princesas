@@ -15,8 +15,8 @@ export default function AlojamientosComp() {
   return (
     <Root>
       <Title>
-        Encuentra entre nuestras unidades la que mejor se adapte a ti y hazlo
-        realidad{" "}
+        Encuentra en nuestras unidades el equilibro perfecto entre relax y
+        confort. Veni a conocernos!
       </Title>
       <CardsContainer>
         <Container>
@@ -27,8 +27,7 @@ export default function AlojamientosComp() {
                 title={a.title}
                 src={a.img}
                 description={a.description}
-                path={a.path}
-              ></CardAlojamiento>
+                path={a.path}></CardAlojamiento>
             );
           })}
         </Container>
@@ -40,8 +39,7 @@ export default function AlojamientosComp() {
                 title={a.title}
                 src={a.img}
                 description={a.description}
-                path={a.path}
-              ></CardAlojamiento>
+                path={a.path}></CardAlojamiento>
             );
           })}
         </ContainerDesktop>
@@ -53,8 +51,7 @@ export default function AlojamientosComp() {
                 title={a.title}
                 src={a.img}
                 description={a.description}
-                path={a.path}
-              ></CardAlojamiento>
+                path={a.path}></CardAlojamiento>
             );
           })}
         </ContainerDesktop>
