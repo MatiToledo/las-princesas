@@ -84,8 +84,7 @@ export function Facebook() {
   return (
     <a
       href="https://www.facebook.com/lasprincesas.cabanas"
-      aria-label="Facebook"
-    >
+      aria-label="Facebook">
       <FacebookIcon></FacebookIcon>
     </a>
   );
@@ -99,8 +98,7 @@ export function Instagram() {
   return (
     <a
       href="https://www.instagram.com/lasprincesas.cabanas/"
-      aria-label="Instragram"
-    >
+      aria-label="Instragram">
       <InstagramIcon></InstagramIcon>
     </a>
   );
@@ -127,8 +125,7 @@ export function Ubication() {
   return (
     <a
       href="https://www.google.com.ar/maps/place/Caba%C3%B1as+las+Princesas/@-31.9266585,-64.5980801,17z/data=!3m1!4b1!4m8!3m7!1s0x95d2b162e20f63ef:0xcd1a925e1472fd0f!5m2!4m1!1i2!8m2!3d-31.9266631!4d-64.5958914"
-      aria-label="Ubication"
-    >
+      aria-label="Ubication">
       <UbicationIcon></UbicationIcon>
     </a>
   );
@@ -146,7 +143,7 @@ const RootServices: any = styled.div`
 `;
 
 type CardServiceProps = {
-  src: StaticImageData;
+  src: string;
   body: string;
   type?: string;
 };
@@ -158,8 +155,7 @@ export function IconService({ src, body, type }: CardServiceProps) {
         width={type == "small" ? 60 : 100}
         height={type == "small" ? 60 : 100}
         layout="fixed"
-        alt={body}
-      ></Image>
+        alt={body}></Image>
       <Body>{body}</Body>
     </RootServices>
   );

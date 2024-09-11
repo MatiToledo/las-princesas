@@ -1,17 +1,17 @@
 import ContactForm from "components/contact-form";
 import Footer from "components/footer";
 import Header from "components/header";
-import Ubication from "components/ubication";
+import Location from "components/location";
 import Head from "next/head";
 
-export default function UbicationPage() {
+export default function LocationPage() {
   return (
     <div>
       <Head>
         <title>Las Princesas | Ubicación</title>
       </Head>
       <Header></Header>
-      <Ubication></Ubication>
+      <Location></Location>
       <ContactForm></ContactForm>
       <Footer></Footer>
     </div>

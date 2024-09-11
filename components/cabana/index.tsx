@@ -10,13 +10,14 @@ import {
 } from "./styled";
 
 export default function CabanaComp({ cabana }: any) {
+  console.log("cabana: ", cabana);
   return (
     <Root>
       <Title>{cabana.title}</Title>
       <Content>
         <CarouselComp images={cabana.images}></CarouselComp>
         <CaracteristicContainer>
-          {cabana?.description?.map((a: any) => {
+          {cabana?.descriptions?.map((a: any) => {
             return <Caracteristic key={a}>{a}</Caracteristic>;
           })}
         </CaracteristicContainer>
@@ -24,14 +25,13 @@ export default function CabanaComp({ cabana }: any) {
       <Equipament>
         <Subtitle color="var(--gray-weak)">EQUIPAMIENTO</Subtitle>
         <ServiceContainer>
-          {cabana?.equipment?.map((a: any) => {
+          {cabana?.equipments?.map((a: any) => {
             return (
               <IconService
                 key={a.description}
-                src={a.img}
+                src={a.src}
                 body={a.description}
-                type="small"
-              ></IconService>
+                type="small"></IconService>
             );
           })}
         </ServiceContainer>

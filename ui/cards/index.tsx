@@ -41,7 +41,7 @@ const Text = styled.div`
 
 type CardHomeProps = {
   title: string;
-  src: StaticImageData;
+  src: string;
   body: string;
 };
 export function CardHome({ title, src, body }: CardHomeProps) {
@@ -51,7 +51,12 @@ export function CardHome({ title, src, body }: CardHomeProps) {
         <Subtitle>{title}</Subtitle>
       </Header>
       <ImageContainer>
-        <Image src={src} layout="fill" objectFit="cover" alt={title}></Image>
+        <Image
+          priority
+          src={src}
+          layout="fill"
+          objectFit="cover"
+          alt={title}></Image>
       </ImageContainer>
       <Text>
         <Body color="var(--white)">{body}</Body>
@@ -120,7 +125,7 @@ const RedirectBox = styled.div`
 `;
 
 type CardRedirectProps = {
-  src: StaticImageData;
+  src: string;
   title: string;
   path: string;
 };
@@ -188,7 +193,7 @@ const AlojamientoImgContainer = styled.div`
 type CardAlojamientoProps = {
   title: string;
   description: string;
-  src: StaticImageData;
+  src: string;
   path: string;
 };
 
@@ -208,11 +213,11 @@ export function CardAlojamiento({
       <AlojamientoImgContainer>
         <Image
           src={src}
+          priority
           layout="fill"
           objectFit="cover"
           onClick={handleClick}
-          alt={title}
-        ></Image>
+          alt={title}></Image>
       </AlojamientoImgContainer>
       <Subtitle align="center" color="var(--gray-weak)">
         {title}

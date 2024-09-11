@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Next, Prev } from "ui/icons";
 
 export default function CarouselComp({ images }: any) {
+  console.log("images: ", images);
   return (
     <Root>
       <Carousel
@@ -20,8 +21,7 @@ export default function CarouselComp({ images }: any) {
           pagingDotsStyle: {
             fill: "white",
           },
-        }}
-      >
+        }}>
         {images?.map((a: any) => {
           return (
             <ImageContainer key={a}>
@@ -31,8 +31,7 @@ export default function CarouselComp({ images }: any) {
                 layout="fill"
                 objectFit="cover"
                 alt={a}
-                loading="eager"
-              ></Image>
+                loading="eager"></Image>
             </ImageContainer>
           );
         })}
