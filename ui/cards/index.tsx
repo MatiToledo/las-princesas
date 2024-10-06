@@ -211,8 +211,7 @@ export function CardAlojamiento({
           layout="fill"
           objectFit="cover"
           onClick={handleClick}
-          alt={title}
-        ></Image>
+          alt={title}></Image>
       </AlojamientoImgContainer>
       <Subtitle align="center" color="var(--gray-weak)">
         {title}
@@ -289,7 +288,12 @@ export function CardService({ title, description, src }: CardServiceProps) {
   return (
     <RootService>
       <ServiceImgContainer>
-        <Image src={src} layout="fill" objectFit="cover" alt={title}></Image>
+        <Image
+          src={src}
+          layout="fill"
+          objectFit="cover"
+          alt={title}
+          priority></Image>
       </ServiceImgContainer>
       <ServiceTextContainer>
         <Subtitle color="var(--gray-weak)">{title}</Subtitle>

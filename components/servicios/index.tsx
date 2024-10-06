@@ -5,14 +5,11 @@ import { CardsContainer, Root } from "./styled";
 
 export default function ServiciosComp() {
   const servicios = useServicios();
-  const sort = servicios?.sort((a: any, b: any) => a.order > b.order).reverse();
+  const sort = servicios?.sort((a: any, b: any) => a.order - b.order);
 
   return (
     <Root>
-      <Title>
-        Encuentra entre nuestros servicios el mejor para tu estadía y hazlo
-        realidad
-      </Title>
+      <Title>Servicios, relax y diversion. Vive la experiencia completa</Title>
       <CardsContainer>
         {sort?.map((a: any) => {
           return (
@@ -20,8 +17,7 @@ export default function ServiciosComp() {
               key={a.key}
               title={a.title}
               src={a.img}
-              description={a.description}
-            ></CardService>
+              description={a.description}></CardService>
           );
         })}
       </CardsContainer>
