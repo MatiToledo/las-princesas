@@ -4,8 +4,7 @@ import Carousel from "nuka-carousel";
 import piletaHome from "public/home.webp";
 import parqueHome from "public/parque-home.webp";
 import { useState } from "react";
-import { Hack, ImageContainer, Root } from "./styled";
-import { Title } from "ui/typography";
+import { ImageContainer, Root } from "./styled";
 
 export default function HomeMain() {
   const [slider, setSlider] = useState(true);
@@ -16,7 +15,6 @@ export default function HomeMain() {
 
   return (
     <Root>
-      <Hack>NOS HACKAERON EL WHATSAPP, PORFAVOR NO HAGA NINGUNA OPERACION</Hack>
       <Carousel
         pauseOnHover={false}
         renderCenterLeftControls={({ previousSlide }) => null}
