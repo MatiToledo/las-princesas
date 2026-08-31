@@ -27,6 +27,17 @@ export default class MyDocument extends Document {
     return (
       <Html lang="es">
         <Head>
+          {/*
+            Evita que iOS/Android autodetecten textos como direcciones o
+            teléfonos. Sin esto, la lista de distancias se interpreta como una
+            sola dirección y al tocarla abre Maps con los tres lugares
+            concatenados. Los contactos reales del footer son links explícitos
+            (tel:, mailto:, Maps), así que no se ven afectados.
+          */}
+          <meta
+            name="format-detection"
+            content="telephone=no, date=no, address=no, email=no"
+          />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
