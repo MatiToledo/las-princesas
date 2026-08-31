@@ -34,12 +34,7 @@ export default function AlojamientosCapacidad() {
           </tbody>
         </Tabla>
       </Scroller>
-      <Nota>
-        Los cuatro aparts están en una misma estructura, en la parte más alta
-        del predio, con vistas abiertas a las sierras. Las Cabañas Superiores
-        tienen dos dormitorios y dos baños completos, con posibilidad de dos
-        camas matrimoniales Queen.
-      </Nota>
+
     </Root>
   );
 }
