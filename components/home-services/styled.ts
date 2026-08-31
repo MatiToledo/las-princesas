@@ -25,6 +25,7 @@ export const ServiceContainer = styled.div`
   justify-content: center;
   gap: 20px;
   width: 350px;
+  max-width: 100%;
   flex-wrap: wrap;
   @media (min-width: 615px) {
     width: 600px;

@@ -1,10 +1,8 @@
-import { useServicios } from "hooks";
 import { CardService } from "ui/cards";
 import { Title } from "ui/typography";
 import { CardsContainer, Root } from "./styled";
 
-export default function ServiciosComp() {
-  const servicios = useServicios();
+export default function ServiciosComp({ servicios }: any) {
   const sort = servicios?.sort((a: any, b: any) => a.order - b.order);
 
   return (

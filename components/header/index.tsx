@@ -20,7 +20,7 @@ export default function Header() {
           src={logo}
           width={40}
           height={40}
-          alt="Logo"
+          alt="Cabañas Las Princesas"
           onClick={handleLogo}
           layout="responsive"></Image>
       </LogoContainer>

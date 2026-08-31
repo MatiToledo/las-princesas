@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { ButtonPrimary } from "ui/buttons";
-import { Title } from "ui/typography";
-import { Box, BoxButton, Root } from "./styled";
+import { BannerHeading, Box, BoxButton, Root } from "./styled";
 
 export default function HomeBanner({ type, path }: any) {
   const router = useRouter();
@@ -15,11 +14,11 @@ export default function HomeBanner({ type, path }: any) {
       right={type == "pileta" ? "" : "5%"}
     >
       <Box>
-        <Title align="left">
+        <BannerHeading align="left">
           {type == "pileta"
             ? "ESE LUGAR QUE BUSCAS ..."
             : "Sentí la magia de las sierras desde un lugar privilegiado..."}
-        </Title>
+        </BannerHeading>
       </Box>
       <BoxButton>
         <ButtonPrimary onClick={handleClick}>

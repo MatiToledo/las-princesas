@@ -159,7 +159,7 @@ export function IconService({ src, body, type }: CardServiceProps) {
         width={type == "small" ? 60 : 100}
         height={type == "small" ? 60 : 100}
         layout="fixed"
-        alt={body}></Image>
+        alt=""></Image>
       <Body>{body}</Body>
     </RootServices>
   );

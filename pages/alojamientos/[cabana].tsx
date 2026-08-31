@@ -2,14 +2,19 @@ import CabanaComp from "components/cabana";
 import Footer from "components/footer";
 import Header from "components/header";
 import { getCabanaData } from "controllers/contentful";
-import Head from "next/head";
+import Seo from "components/seo";
+import { useRouter } from "next/router";
 
 export default function CabanaPage({ cabana }: any) {
+  const { asPath } = useRouter();
+
   return (
     <div>
-      <Head>
-        <title>Las Princesas | {cabana.title}</title>
-      </Head>
+      <Seo
+        title={`${cabana.title} – Cabañas Las Princesas, Los Reartes`}
+        description={`${cabana.title} en Cabañas Las Princesas, frente al río en Los Reartes. Totalmente equipada, con acceso al parque, pileta y quincho del complejo.`}
+        path={asPath}
+      />
       <Header></Header>
       <CabanaComp cabana={cabana}></CabanaComp>
       <Footer></Footer>

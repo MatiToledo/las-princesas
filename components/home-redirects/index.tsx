@@ -19,16 +19,19 @@ export default function HomeRedirects() {
           title="ALOJAMIENTO"
           src={aloj}
           path="alojamientos"
+          alt="Interior de una cabaña equipada en Cabañas Las Princesas, Los Reartes"
         ></CardRedirect>
         <CardRedirect
           title="SERVICIOS"
           src={serv}
           path="servicios"
+          alt="Servicios del complejo: pileta, quincho y espacios comunes"
         ></CardRedirect>
         <CardRedirect
           title="UBICACION"
           src={ubic}
           path="ubicacion"
+          alt="El río Los Reartes y las sierras, frente al complejo"
         ></CardRedirect>
       </CardsContainer>
     );
@@ -43,7 +46,7 @@ export default function HomeRedirects() {
           src={pileta}
           layout="fill"
           objectFit="cover"
-          alt="back-pileta"
+          alt="Pileta del complejo rodeada de parque, en Los Reartes"
         ></Image>
         <Subtitle weight="600">VIVÍ Y SENTÍ LA ESENCIA DE LO NATURAL</Subtitle>
       </ImageContainer>

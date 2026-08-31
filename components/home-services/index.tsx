@@ -17,7 +17,7 @@ export default function HomeServices() {
     <Root>
       <Header>
         <Title>
-          TU LUGAR IDEAL PARA DESCANSAR Y DISFRUTAR DE LA NATURALEZA
+          Cabañas Las Princesas: tu lugar frente al río en Los Reartes
         </Title>
         <Body>
           Contamos con 7 cabañas y 4 aparts sumamente confortables y totalmente
@@ -30,14 +30,17 @@ export default function HomeServices() {
         <CardHome
           title="ALOJAMIENTO"
           src={alojamiento}
+          alt="Cabaña equipada y amoblada en Cabañas Las Princesas, Los Reartes"
           body="Ofrecemos servicio de alojamiento en cabañas y habitaciones totalmente equipadas y amobladas con cálidos detalles de decoración."></CardHome>
         <CardHome
           title="RELAX"
           src={relax}
+          alt="Zona de pileta y solárium con camastros, rodeada de parque"
           body="Ofrecemos espacios de relax en nuestro parque, zona de pileta y solárium que te permitirán tomar sol, escuchar música o simplemente descansar."></CardHome>
         <CardHome
           title="ESPARCIMIENTO"
           src={esparcimiento}
+          alt="Espacios de juego al aire libre y Club House del complejo"
           body="Ofrecemos oportunidad para el disfrute y contacto con la naturaleza en espacios de entretenimiento y juego al aire libre y en nuestro Club House."></CardHome>
       </CardsHomeContainer>
       <ServiceContainer>

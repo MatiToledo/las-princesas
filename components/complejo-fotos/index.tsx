@@ -7,14 +7,16 @@ export default function ComplejoFotos({ images }: any) {
     <Root>
       <Title>NUESTRO COMPLEJO</Title>
       <PhotosContainer>
-        {images.map((a: any) => {
+        {images.map((a: any, i: number) => {
           return (
             <PhotoImgContainer key={a.id}>
               <Image
                 src={a.img}
                 layout="fill"
                 objectFit="cover"
-                alt={a}
+                alt={`Parque y complejo de Cabañas Las Princesas, Los Reartes (foto ${
+                  i + 1
+                })`}
               ></Image>
             </PhotoImgContainer>
           );

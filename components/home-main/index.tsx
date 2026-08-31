@@ -39,7 +39,7 @@ export default function HomeMain() {
             layout="fill"
             objectFit="cover"
             priority={true}
-            alt="pileta"></Image>
+            alt="Pileta y solárium frente al río – Cabañas Las Princesas, Los Reartes"></Image>
           {slider == true ? (
             <HomeBanner type="pileta" path="servicios"></HomeBanner>
           ) : null}
@@ -49,7 +49,7 @@ export default function HomeMain() {
             src={parqueHome}
             layout="fill"
             objectFit="cover"
-            alt="parque"></Image>
+            alt="Parque y espacios comunes – Cabañas Las Princesas, Los Reartes"></Image>
           {slider == false ? (
             <HomeBanner type="parque" path="alojamientos"></HomeBanner>
           ) : null}

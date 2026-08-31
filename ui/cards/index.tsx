@@ -43,15 +43,20 @@ type CardHomeProps = {
   title: string;
   src: StaticImageData;
   body: string;
+  alt?: string;
 };
-export function CardHome({ title, src, body }: CardHomeProps) {
+export function CardHome({ title, src, body, alt }: CardHomeProps) {
   return (
     <RootHome>
       <Header>
         <Subtitle>{title}</Subtitle>
       </Header>
       <ImageContainer>
-        <Image src={src} layout="fill" objectFit="cover" alt={title}></Image>
+        <Image
+          src={src}
+          layout="fill"
+          objectFit="cover"
+          alt={alt || title}></Image>
       </ImageContainer>
       <Text>
         <Body color="var(--white)">{body}</Body>
@@ -123,9 +128,10 @@ type CardRedirectProps = {
   src: StaticImageData;
   title: string;
   path: string;
+  alt?: string;
 };
 
-export function CardRedirect({ title, src, path }: CardRedirectProps) {
+export function CardRedirect({ title, src, path, alt }: CardRedirectProps) {
   const router = useRouter();
   function handleClick() {
     router.push({ pathname: "/" + path });
@@ -134,7 +140,11 @@ export function CardRedirect({ title, src, path }: CardRedirectProps) {
   return (
     <RootRedirect>
       <RedirectImgContainer>
-        <Image src={src} layout="fill" objectFit="cover" alt={title}></Image>
+        <Image
+          src={src}
+          layout="fill"
+          objectFit="cover"
+          alt={alt || title}></Image>
       </RedirectImgContainer>
       <RedirectBox>
         <Large>{title}</Large>
@@ -211,7 +221,7 @@ export function CardAlojamiento({
           layout="fill"
           objectFit="cover"
           onClick={handleClick}
-          alt={title}></Image>
+          alt={`${title} – Cabañas Las Princesas, Los Reartes`}></Image>
       </AlojamientoImgContainer>
       <Subtitle align="center" color="var(--gray-weak)">
         {title}
@@ -292,7 +302,7 @@ export function CardService({ title, description, src }: CardServiceProps) {
           src={src}
           layout="fill"
           objectFit="cover"
-          alt={title}
+          alt={`${title} – Cabañas Las Princesas, Los Reartes`}
           priority></Image>
       </ServiceImgContainer>
       <ServiceTextContainer>

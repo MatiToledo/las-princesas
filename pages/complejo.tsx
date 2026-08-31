@@ -2,14 +2,16 @@ import ComplejoFotos from "components/complejo-fotos";
 import Footer from "components/footer";
 import Header from "components/header";
 import { getComplejoImages } from "controllers/contentful";
-import Head from "next/head";
+import Seo from "components/seo";
 
 export default function ComplejoPage({ images }: any) {
   return (
     <div>
-      <Head>
-        <title>Las Princesas | Parque</title>
-      </Head>
+      <Seo
+        title="El Parque y el Complejo – Cabañas Las Princesas, Los Reartes"
+        description="Amplio parque frente al río con espacios comunes, pileta, solárium y zonas de juego al aire libre. Mirá las fotos del complejo en Los Reartes."
+        path="/complejo"
+      />
       <Header></Header>
       <ComplejoFotos images={images}></ComplejoFotos>
       <Footer></Footer>

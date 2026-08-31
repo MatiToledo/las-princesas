@@ -29,8 +29,9 @@ export const Content = styled.div`
   }
 `;
 
-export const MapContainer = styled.div`
+export const MapContainer = styled.iframe`
   min-height: 400px;
   height: 100%;
   width: 100%;
+  border: none;
 `;

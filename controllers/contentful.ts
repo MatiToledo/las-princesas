@@ -29,6 +29,35 @@ export function getMultipleImagesContentful(image: any, assets: any) {
   }
 }
 
+export function getAlojamientosData(data: any) {
+  const assets = data?.includes.Asset;
+
+  return data?.items.map((item: any) => {
+    return {
+      key: item.sys.id,
+      title: item.fields.title,
+      description: item.fields.description,
+      img: getImageContentful(item, assets),
+      path: item.fields.path,
+      order: item.fields.order,
+    };
+  });
+}
+
+export function getServiciosData(data: any) {
+  const assets = data?.includes.Asset;
+
+  return data?.items.map((item: any) => {
+    return {
+      key: item.sys.id,
+      title: item.fields.title,
+      description: item.fields.description,
+      img: getImageContentful(item, assets),
+      order: item.fields.order,
+    };
+  });
+}
+
 export function getCabanaData(data: any) {
   const assets = data?.includes.Asset;
 

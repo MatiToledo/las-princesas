@@ -3,7 +3,7 @@ import Carousel from "nuka-carousel";
 import Image from "next/image";
 import { Next, Prev } from "ui/icons";
 
-export default function CarouselComp({ images }: any) {
+export default function CarouselComp({ images, alt }: any) {
   return (
     <Root>
       <Carousel
@@ -22,7 +22,7 @@ export default function CarouselComp({ images }: any) {
           },
         }}
       >
-        {images?.map((a: any) => {
+        {images?.map((a: any, i: number) => {
           return (
             <ImageContainer key={a}>
               <Image
@@ -30,7 +30,9 @@ export default function CarouselComp({ images }: any) {
                 src={a}
                 layout="fill"
                 objectFit="cover"
-                alt={a}
+                alt={`${
+                  alt || "Cabañas Las Princesas, Los Reartes"
+                } (foto ${i + 1})`}
                 loading="eager"
               ></Image>
             </ImageContainer>

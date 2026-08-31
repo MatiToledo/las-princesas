@@ -1,10 +1,8 @@
-import { useAlojamientos } from "hooks";
 import { CardAlojamiento } from "ui/cards";
 import { Title } from "ui/typography";
 import { CardsContainer, Container, ContainerDesktop, Root } from "./styled";
 
-export default function AlojamientosComp() {
-  const alojamientos = useAlojamientos();
+export default function AlojamientosComp({ alojamientos }: any) {
   const sort = alojamientos
     ?.sort((a: any, b: any) => a.order < b.order)
     .reverse();

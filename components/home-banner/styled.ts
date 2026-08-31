@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { Subtitle } from "ui/typography";
 
 const BounceAnimation = keyframes`
   0% {transform: translateY(100vh);} 
@@ -27,6 +28,11 @@ export const Root: any = styled.div`
     left: ${(props: any) => props.left};
     right: ${(props: any) => props.right};
   }
+`;
+
+export const BannerHeading = styled(Subtitle)`
+  font-size: 30px;
+  color: var(--gray-strong);
 `;
 
 export const Box = styled.div`
