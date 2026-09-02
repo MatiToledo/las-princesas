@@ -47,15 +47,5 @@ export const Tabla = styled.table`
   td:last-child {
     font-family: "Lato", sans-serif;
     font-weight: 700;
-    white-space: nowrap;
   }
-`;
-
-export const Nota = styled.p`
-  margin: 0;
-  max-width: 860px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--gray-weak);
 `;

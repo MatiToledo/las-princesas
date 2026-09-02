@@ -59,44 +59,38 @@ export const UNIDADES = [
   {
     nombre: "Apart planta baja",
     cantidad: 2,
-    base: "2 adultos",
-    adicionales: "+1 huésped",
-    maximo: 3,
+    capacidad: "2 a 3 pasajeros",
+    ideal: "para familia con un bebé o niño pequeño",
   },
   {
     nombre: "Apart planta alta",
     cantidad: 2,
-    base: "2 huéspedes",
-    adicionales: "—",
-    maximo: 2,
+    capacidad: "2 pasajeros",
+    ideal: "para parejas",
   },
   {
     nombre: "Cabaña 1 dormitorio",
     cantidad: 2,
-    base: "2 adultos",
-    adicionales: "+2 huéspedes",
-    maximo: 4,
+    capacidad: "2 a 4 pasajeros",
+    ideal: "para familia tipo con 1 o 2 niños",
   },
   {
     nombre: "Cabaña 2 dormitorios",
     cantidad: 2,
-    base: "4 adultos",
-    adicionales: "+1 huésped",
-    maximo: 5,
+    capacidad: "4 pasajeros",
+    ideal: "para familias medianas o grupos de amigos",
   },
   {
     nombre: "Cabaña 2 dormitorios independiente",
     cantidad: 1,
-    base: "4 adultos",
-    adicionales: "+1 huésped",
-    maximo: 5,
+    capacidad: "5 pasajeros",
+    ideal: "para familias o grupos reducidos",
   },
   {
     nombre: "Cabañas superiores",
     cantidad: 2,
-    base: "6 adultos",
-    adicionales: "+2 huéspedes",
-    maximo: 8,
+    capacidad: "6 a 8 pasajeros",
+    ideal: "para familias numerosas o grupos grandes",
   },
 ];
 
@@ -118,32 +112,27 @@ export const FAQ = [
   {
     pregunta: "¿El desayuno está incluido?",
     respuesta:
-      "Sí. En la cabaña vas a encontrar infusiones (té, café, chocolate y mate cocido), leche en polvo, jugo de naranja de cortesía y untables. Además, cada mañana te acercamos panificación fresca.",
+      "Sí, todas las mañanas vas a disfrutar de nuestro desayuno. Dejamos a tu disposición en la cabaña infusiones de todo tipo, leche, dulce/untables y un jugo de naranja de bienvenida. Cada día por la mañana te acercamos productos de panadería frescos para que desayunes con total tranquilidad y a tu propio ritmo.",
   },
   {
-    pregunta: "¿La pileta es climatizada?",
+    pregunta: "¿La pileta está climatizada?",
     respuesta:
-      "La pileta principal tiene aproximadamente 100 m² de espejo de agua y está climatizada por energía solar de noviembre a marzo. El complejo también cuenta con pileta para niños, jacuzzi exterior y solárium húmedo, disponibles todo el año. Tu estadía incluye una sesión diaria de hidromasaje.",
+      "Disponemos de una pileta principal al aire libre, climatizada por energía solar de noviembre a marzo, pileta para los más chicos, solárium húmedo y jacuzzi al aire libre.",
   },
   {
     pregunta: "¿Cómo se llega al complejo? ¿El camino es de tierra?",
     respuesta:
-      "Se llega por autopista hasta Villa Ciudad de América y luego por ruta hasta el Puente San Ignacio de Loyola. Desde el puente son 1.800 metros por la costanera del río, por camino de tierra consolidada, tranquilo y transitable.",
-  },
-  {
-    pregunta: "¿Cuántas personas entran en cada cabaña?",
-    respuesta:
-      "Tenemos 7 cabañas y 4 aparts, con capacidades desde 2 hasta 8 huéspedes. Los aparts alojan de 2 a 3 personas, las cabañas de 4 a 5, y las Cabañas Superiores hasta 8.",
+      "Se accede por autovía hasta Villa Ciudad de América y luego por ruta hasta el Puente San Ignacio de Loyola. Desde el puente, son 1.800 metros por la costanera del río por un camino de tierra consolidada, tranquilo y transitable.",
   },
   {
     pregunta: "¿Cuál es la política de cancelación?",
     respuesta:
-      "Con 20 días o más de anticipación, la seña queda a favor para reprogramar la estadía en temporada baja, sujeto a disponibilidad. Con menos de 20 días, no presentación o salida anticipada, se pierde la seña. La estadía puede transferirse a otra persona manteniendo las fechas reservadas y avisando previamente.",
+      "Las cancelaciones o modificaciones realizadas con 20 días o más de anticipación a la fecha de ingreso mantendrán la seña a favor del cliente para ser reutilizada en temporada baja (sujeto a disponibilidad del complejo). En cancelaciones con menos de 20 días de aviso, no presentación (no show) o salidas anticipadas, la seña no será reembolsable ni acreditable. La reserva podrá ser transferida a un tercero respetando las fechas originales e informando previamente a la administración.",
   },
   {
-    pregunta: "¿Hay cochera?",
+    pregunta: "¿Hay cocheras cubiertas?",
     respuesta:
-      "Sí, todas las cocheras son cubiertas. Algunas cabañas tienen la cochera a su lado y otras unidades comparten una cochera colectiva. También hay cocheras adicionales semicerradas.",
+      "Todas las unidades cuentan con espacio de estacionamiento protegido. Disponemos de cocheras cubiertas individuales en algunas cabañas o una cochera común techada y amplia, así como cocheras semicubiertas adicionales para brindar la mayor comodidad a nuestros huéspedes.",
   },
   {
     pregunta: "¿Cómo es el WiFi?",
@@ -163,7 +152,7 @@ export const AMENITIES_SCHEMA = [
   "Juegos de madera para niños",
   "WiFi por fibra óptica con router por unidad",
   "Desayuno incluido",
-  "Cochera cubierta",
+  "Estacionamiento protegido: cocheras cubiertas y semicubiertas",
   "Aire acondicionado frío/calor",
   "Se aceptan mascotas (según disponibilidad)",
 ];

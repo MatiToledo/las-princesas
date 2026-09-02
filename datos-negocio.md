@@ -66,8 +66,9 @@ router WiFi exclusivo por cabaña · 2-4 reposeras y 1 sombrilla · hamaca parag
 
 **Aire acondicionado incluido en todas las unidades.**
 
-**Cocheras:** todas cubiertas. Algunas cabañas tienen cochera propia al lado; otras
-unidades comparten cochera colectiva. Hay cocheras adicionales semicerradas.
+**Cocheras:** todas las unidades tienen espacio de estacionamiento protegido. Algunas
+cabañas tienen cochera cubierta individual al lado; otras unidades comparten una cochera
+común techada y amplia. Hay cocheras semicubiertas adicionales.
 
 ## 7. Políticas
 
